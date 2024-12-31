@@ -32,11 +32,11 @@ public class Main {
             JSONObject jsonObject = new JSONObject();
                 jsonObject.put("rule.name", row.getCell(3));
                 jsonObject.put("rule.catogary", "Network");
-
+                //Rule context obj
                 JSONObject rule_context = new JSONObject();
                     rule_context.put("rule.check.catagory", row.getCell(11));
                     rule_context.put("rule.check.type", row.getCell(10));
-                    JSONArray rule_conditions = new JSONArray();
+                    JSONArray rule_conditions = new JSONArray(); //array for rule conditions
                         JSONObject condition = new JSONObject();
                         condition.put("condition", row.getCell(12));
                         condition.put("result.pattern", row.getCell(13));
@@ -59,9 +59,9 @@ public class Main {
                 jsonObject.put("rule.default.value", row.getCell(35));
                 jsonObject.put("rule.references", row.getCell(34));
                 jsonObject.put("rule.additional.information", row.getCell(16));
-
+                //Array for rule control
                 JSONArray rule_controls = new JSONArray();
-                JSONObject control1 = new JSONObject();
+                JSONObject control1 = new JSONObject();//control 1 obj
                     control1.put("rule.control.version", "v"+row.getCell(22));
                         String input_title = row.getCell(18).toString();
                             String title;
@@ -83,7 +83,7 @@ public class Main {
                         }
                         else
                             description1 = "";
-                    control1.put("rule.control.description", description1);
+                        control1.put("rule.control.description", description1);
 
                         String[] rules_ig1 = {"", "", ""};
                         if (row.getCell(25).toString() != "" ) {
@@ -97,7 +97,7 @@ public class Main {
                         }
                     control1.put("rule.control.ig", rules_ig1);
 
-                JSONObject control2 = new JSONObject();
+                JSONObject control2 = new JSONObject();//control 2 obj
                     control2.put("rule.control.version", "v"+row.getCell(28));
 
                     String input_title2 = row.getCell(18).toString();
@@ -113,6 +113,7 @@ public class Main {
                     control2.put("rule.control.name", title2);
                     control2.put("rule.control.name", title2);
                     String input = row.getCell(19).toString();
+                    //extract description
                     String description;
                     Pattern pattern = Pattern.compile("DESCRIPTION:(.*)");
                     Matcher matcher = pattern.matcher(input);
