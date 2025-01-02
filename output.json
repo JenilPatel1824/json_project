@@ -26,7 +26,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -35,7 +35,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -72,7 +72,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -81,7 +81,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -117,7 +117,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -126,7 +126,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -157,7 +157,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -166,7 +166,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -202,7 +202,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -211,7 +211,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -248,7 +248,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Audit Logs",
-        "rule.control.version": "v8 8.2",
+        "rule.control.version": "8.2",
         "rule.control.description": "Collect audit logs. Ensure that logging, per the enterprise’s audit log management process, has been enabled across enterprise assets."
       },
       {
@@ -257,7 +257,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -293,7 +293,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -302,7 +302,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -339,7 +339,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Audit Logs",
-        "rule.control.version": "v8 8.2",
+        "rule.control.version": "8.2",
         "rule.control.description": "Collect audit logs. Ensure that logging, per the enterprise’s audit log management process, has been enabled across enterprise assets."
       },
       {
@@ -348,7 +348,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -385,7 +385,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Audit Logs",
-        "rule.control.version": "v8 8.2",
+        "rule.control.version": "8.2",
         "rule.control.description": "Collect audit logs. Ensure that logging, per the enterprise’s audit log management process, has been enabled across enterprise assets."
       },
       {
@@ -394,7 +394,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -432,7 +432,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Audit Logs",
-        "rule.control.version": "v8 8.2",
+        "rule.control.version": "8.2",
         "rule.control.description": "Collect audit logs. Ensure that logging, per the enterprise’s audit log management process, has been enabled across enterprise assets."
       },
       {
@@ -441,7 +441,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -475,12 +475,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -509,7 +509,7 @@
           "ig3"
         ],
         "rule.control.name": "Require MFA for Administrative Access",
-        "rule.control.version": "v8 6.5",
+        "rule.control.version": "6.5",
         "rule.control.description": "Require MFA for all administrative access accounts, where supported, on all enterprise assets, whether managed on-site or through a third-party provider."
       },
       {
@@ -518,7 +518,7 @@
           "ig3"
         ],
         "rule.control.name": "Use Multifactor Authentication For All Administrative Access",
-        "rule.control.version": "v7 4.5",
+        "rule.control.version": "4.5",
         "rule.control.description": "Use multi-factor authentication and encrypted channels for all administrative account access."
       }
     ],
@@ -544,7 +544,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -553,7 +553,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -582,7 +582,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
+        "rule.control.version": "12.8",
         "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
       },
       {
@@ -591,7 +591,7 @@
           "ig3"
         ],
         "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
+        "rule.control.version": "11.7",
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
@@ -619,7 +619,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
+        "rule.control.version": "12.8",
         "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
       },
       {
@@ -628,7 +628,7 @@
           "ig3"
         ],
         "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
+        "rule.control.version": "11.7",
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
@@ -659,7 +659,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
       },
       {
@@ -669,7 +669,7 @@
           "ig3"
         ],
         "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
@@ -700,7 +700,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
       },
       {
@@ -710,7 +710,7 @@
           "ig3"
         ],
         "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
@@ -741,7 +741,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
       },
       {
@@ -751,7 +751,7 @@
           "ig3"
         ],
         "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
@@ -781,7 +781,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
       },
       {
@@ -791,7 +791,7 @@
           "ig3"
         ],
         "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
@@ -815,12 +815,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -873,7 +873,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
       },
       {
@@ -883,7 +883,7 @@
           "ig3"
         ],
         "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
@@ -953,7 +953,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Security Awareness Program",
-        "rule.control.version": "v8 14.1",
+        "rule.control.version": "14.1",
         "rule.control.description": "Establish and maintain a security awareness program. The purpose of a security awareness program is to educate the enterprise’s workforce on how to interact with enterprise assets and data in a secure manner. Conduct training at hire and, at a minimum, annually. Review and update content annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -963,7 +963,7 @@
           "ig3"
         ],
         "rule.control.name": "Implement a Security Awareness Program",
-        "rule.control.version": "v7 17.3",
+        "rule.control.version": "17.3",
         "rule.control.description": "Create a security awareness program for all workforce members to complete on a regular basis to ensure they understand and exhibit the necessary behaviors and skills to help ensure the security of the organization. The organization's security awareness program should be communicated in a continuous and engaging manner."
       }
     ],
@@ -1000,7 +1000,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Security Awareness Program",
-        "rule.control.version": "v8 14.1",
+        "rule.control.version": "14.1",
         "rule.control.description": "Establish and maintain a security awareness program. The purpose of a security awareness program is to educate the enterprise’s workforce on how to interact with enterprise assets and data in a secure manner. Conduct training at hire and, at a minimum, annually. Review and update content annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -1010,7 +1010,7 @@
           "ig3"
         ],
         "rule.control.name": "Implement a Security Awareness Program",
-        "rule.control.version": "v7 17.3",
+        "rule.control.version": "17.3",
         "rule.control.description": "Create a security awareness program for all workforce members to complete on a regular basis to ensure they understand and exhibit the necessary behaviors and skills to help ensure the security of the organization. The organization's security awareness program should be communicated in a continuous and engaging manner."
       }
     ],
@@ -1047,7 +1047,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Security Awareness Program",
-        "rule.control.version": "v8 14.1",
+        "rule.control.version": "14.1",
         "rule.control.description": "Establish and maintain a security awareness program. The purpose of a security awareness program is to educate the enterprise’s workforce on how to interact with enterprise assets and data in a secure manner. Conduct training at hire and, at a minimum, annually. Review and update content annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -1057,7 +1057,7 @@
           "ig3"
         ],
         "rule.control.name": "Implement a Security Awareness Program",
-        "rule.control.version": "v7 17.3",
+        "rule.control.version": "17.3",
         "rule.control.description": "Create a security awareness program for all workforce members to complete on a regular basis to ensure they understand and exhibit the necessary behaviors and skills to help ensure the security of the organization. The organization's security awareness program should be communicated in a continuous and engaging manner."
       }
     ],
@@ -1088,7 +1088,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Security Awareness Program",
-        "rule.control.version": "v8 14.1",
+        "rule.control.version": "14.1",
         "rule.control.description": "Establish and maintain a security awareness program. The purpose of a security awareness program is to educate the enterprise’s workforce on how to interact with enterprise assets and data in a secure manner. Conduct training at hire and, at a minimum, annually. Review and update content annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -1098,7 +1098,7 @@
           "ig3"
         ],
         "rule.control.name": "Implement a Security Awareness Program",
-        "rule.control.version": "v7 17.3",
+        "rule.control.version": "17.3",
         "rule.control.description": "Create a security awareness program for all workforce members to complete on a regular basis to ensure they understand and exhibit the necessary behaviors and skills to help ensure the security of the organization. The organization's security awareness program should be communicated in a continuous and engaging manner."
       }
     ],
@@ -1153,7 +1153,7 @@
           "ig3"
         ],
         "rule.control.name": "Restrict Administrator Privileges to Dedicated Administrator Accounts",
-        "rule.control.version": "v8 5.4",
+        "rule.control.version": "5.4",
         "rule.control.description": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user’s primary, non-privileged account."
       },
       {
@@ -1163,7 +1163,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure the Use of Dedicated Administrative Accounts",
-        "rule.control.version": "v7 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Ensure that all users with administrative account access use a dedicated or secondary account for elevated activities. This account should only be used for administrative activities and not internet browsing, email, or similar activities."
       }
     ],
@@ -1200,7 +1200,7 @@
           "ig3"
         ],
         "rule.control.name": "Encrypt Sensitive Data at Rest",
-        "rule.control.version": "v8 3.11",
+        "rule.control.version": "3.11",
         "rule.control.description": "Encrypt sensitive data at rest on servers, applications, and databases containing sensitive data. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data."
       },
       {
@@ -1209,7 +1209,7 @@
           "ig3"
         ],
         "rule.control.name": "Encrypt or Hash all Authentication Credentials",
-        "rule.control.version": "v7 16.4",
+        "rule.control.version": "16.4",
         "rule.control.description": "Encrypt or hash with a salt all authentication credentials when stored."
       }
     ],
@@ -1238,7 +1238,7 @@
           "ig3"
         ],
         "rule.control.name": "Encrypt Sensitive Data at Rest",
-        "rule.control.version": "v8 3.11",
+        "rule.control.version": "3.11",
         "rule.control.description": "Encrypt sensitive data at rest on servers, applications, and databases containing sensitive data. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data."
       },
       {
@@ -1247,7 +1247,7 @@
           "ig3"
         ],
         "rule.control.name": "Encrypt or Hash all Authentication Credentials",
-        "rule.control.version": "v7 16.4",
+        "rule.control.version": "16.4",
         "rule.control.description": "Encrypt or hash with a salt all authentication credentials when stored."
       }
     ],
@@ -1281,7 +1281,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1290,7 +1290,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1315,7 +1315,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1324,7 +1324,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1349,7 +1349,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1358,7 +1358,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1383,7 +1383,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1392,7 +1392,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1441,7 +1441,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
+        "rule.control.version": "12.8",
         "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
       },
       {
@@ -1450,7 +1450,7 @@
           "ig3"
         ],
         "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
+        "rule.control.version": "11.7",
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
@@ -1469,7 +1469,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
+        "rule.control.version": "12.8",
         "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
       },
       {
@@ -1478,7 +1478,7 @@
           "ig3"
         ],
         "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
+        "rule.control.version": "11.7",
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
@@ -1522,7 +1522,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
+        "rule.control.version": "12.8",
         "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
       },
       {
@@ -1531,7 +1531,7 @@
           "ig3"
         ],
         "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
+        "rule.control.version": "11.7",
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
@@ -1566,7 +1566,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
+        "rule.control.version": "12.8",
         "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
       },
       {
@@ -1575,7 +1575,7 @@
           "ig3"
         ],
         "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
+        "rule.control.version": "11.7",
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
@@ -1607,12 +1607,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -1648,7 +1648,7 @@
           "ig3"
         ],
         "rule.control.name": "Encrypt Sensitive Data in Transit",
-        "rule.control.version": "v8 3.10",
+        "rule.control.version": "3.10",
         "rule.control.description": "Encrypt sensitive data in transit. Example implementations can include: Transport Layer Security (TLS) and Open Secure Shell (OpenSSH)."
       },
       {
@@ -1657,7 +1657,7 @@
           "ig3"
         ],
         "rule.control.name": "Use Only Standardized and Extensively Reviewed Encryption Algorithms",
-        "rule.control.version": "v7 18.5",
+        "rule.control.version": "18.5",
         "rule.control.description": "Use only standardized and extensively reviewed encryption algorithms."
       }
     ],
@@ -1717,7 +1717,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1726,7 +1726,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1758,7 +1758,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1767,7 +1767,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1799,7 +1799,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1808,7 +1808,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1840,7 +1840,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1849,7 +1849,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1881,7 +1881,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1890,7 +1890,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1922,7 +1922,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1931,7 +1931,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -1963,7 +1963,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1972,7 +1972,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -2015,12 +2015,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -2069,12 +2069,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -2106,12 +2106,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -2141,7 +2141,7 @@
           "ig3"
         ],
         "rule.control.name": "Leverage Vetted Modules or Services for Application Security Components",
-        "rule.control.version": "v8 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Leverage vetted modules or services for application security components, such as identity management, encryption, and auditing and logging. Using platform features in critical security functions will reduce developers’ workload and minimize the likelihood of design or implementation errors. Modern operating systems provide effective mechanisms for identification, authentication, and authorization and make those mechanisms available to applications. Use only standardized, currently accepted, and extensively reviewed encryption algorithms. Operating systems also provide mechanisms to create and maintain secure audit logs."
       },
       {
@@ -2150,7 +2150,7 @@
           "ig3"
         ],
         "rule.control.name": "Use Only Standardized and Extensively Reviewed Encryption Algorithms",
-        "rule.control.version": "v7 18.5",
+        "rule.control.version": "18.5",
         "rule.control.description": "Use only standardized and extensively reviewed encryption algorithms."
       }
     ],
@@ -2182,7 +2182,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
+        "rule.control.version": "4.3",
         "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
       },
       {
@@ -2192,7 +2192,7 @@
           "ig3"
         ],
         "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
+        "rule.control.version": "16.11",
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
@@ -2218,12 +2218,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -2276,7 +2276,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2285,7 +2285,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2321,7 +2321,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2330,7 +2330,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2366,7 +2366,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2375,7 +2375,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2405,7 +2405,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Security Event Alerting",
-        "rule.control.version": "v8 13.1",
+        "rule.control.version": "13.1",
         "rule.control.description": "Centralize security event alerting across enterprise assets for log correlation and analysis. Best practice implementation requires the use of a SIEM, which includes vendor-defined event correlation alerts. A log analytics platform configured with security-relevant correlation alerts also satisfies this Safeguard."
       },
       {
@@ -2414,7 +2414,7 @@
           "ig3"
         ],
         "rule.control.name": "Tune Security Event Alerting Thresholds",
-        "rule.control.version": "v8 13.11",
+        "rule.control.version": "6.6",
         "rule.control.description": "Tune security event alerting thresholds monthly, or more frequently."
       }
     ],
@@ -2444,7 +2444,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2453,7 +2453,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2489,7 +2489,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2498,7 +2498,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2534,7 +2534,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2543,7 +2543,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2563,7 +2563,7 @@
           "ig3"
         ],
         "rule.control.name": "Collect Detailed Audit Logs",
-        "rule.control.version": "v8 8.5",
+        "rule.control.version": "8.5",
         "rule.control.description": "Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation."
       },
       {
@@ -2572,7 +2572,7 @@
           "ig3"
         ],
         "rule.control.name": "Enable Detailed Logging",
-        "rule.control.version": "v7 6.3",
+        "rule.control.version": "6.3",
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
@@ -2653,7 +2653,7 @@
           "ig3"
         ],
         "rule.control.name": "Standardize Time Synchronization",
-        "rule.control.version": "v8 8.4",
+        "rule.control.version": "8.4",
         "rule.control.description": "Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported."
       },
       {
@@ -2662,7 +2662,7 @@
           "ig3"
         ],
         "rule.control.name": "Utilize Three Synchronized Time Sources",
-        "rule.control.version": "v7 6.1",
+        "rule.control.version": "6.1",
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
@@ -2715,7 +2715,7 @@
           "ig3"
         ],
         "rule.control.name": "Standardize Time Synchronization",
-        "rule.control.version": "v8 8.4",
+        "rule.control.version": "8.4",
         "rule.control.description": "Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported."
       },
       {
@@ -2724,7 +2724,7 @@
           "ig3"
         ],
         "rule.control.name": "Utilize Three Synchronized Time Sources",
-        "rule.control.version": "v7 6.1",
+        "rule.control.version": "6.1",
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
@@ -2760,7 +2760,7 @@
           "ig3"
         ],
         "rule.control.name": "Standardize Time Synchronization",
-        "rule.control.version": "v8 8.4",
+        "rule.control.version": "8.4",
         "rule.control.description": "Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported."
       },
       {
@@ -2769,7 +2769,7 @@
           "ig3"
         ],
         "rule.control.name": "Utilize Three Synchronized Time Sources",
-        "rule.control.version": "v7 6.1",
+        "rule.control.version": "6.1",
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
@@ -2805,7 +2805,7 @@
           "ig3"
         ],
         "rule.control.name": "Standardize Time Synchronization",
-        "rule.control.version": "v8 8.4",
+        "rule.control.version": "8.4",
         "rule.control.description": "Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported."
       },
       {
@@ -2814,7 +2814,7 @@
           "ig3"
         ],
         "rule.control.name": "Utilize Three Synchronized Time Sources",
-        "rule.control.version": "v7 6.1",
+        "rule.control.version": "6.1",
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
@@ -2835,7 +2835,7 @@
           "ig3"
         ],
         "rule.control.name": "Standardize Time Synchronization",
-        "rule.control.version": "v8 8.4",
+        "rule.control.version": "8.4",
         "rule.control.description": "Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported."
       },
       {
@@ -2844,7 +2844,7 @@
           "ig3"
         ],
         "rule.control.name": "Utilize Three Synchronized Time Sources",
-        "rule.control.version": "v7 6.1",
+        "rule.control.version": "6.1",
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
@@ -2901,7 +2901,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2910,7 +2910,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -2931,7 +2931,7 @@
           "ig3"
         ],
         "rule.control.name": "Centralize Account Management",
-        "rule.control.version": "v8 5.6",
+        "rule.control.version": "5.6",
         "rule.control.description": "Centralize account management through a directory or identity service."
       },
       {
@@ -2940,7 +2940,7 @@
           "ig3"
         ],
         "rule.control.name": "Configure Centralized Point of Authentication",
-        "rule.control.version": "v7 16.2",
+        "rule.control.version": "16.2",
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
@@ -2990,7 +2990,7 @@
           "ig3"
         ],
         "rule.control.name": "Standardize Time Synchronization",
-        "rule.control.version": "v8 8.4",
+        "rule.control.version": "8.4",
         "rule.control.description": "Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported."
       },
       {
@@ -2999,7 +2999,7 @@
           "ig3"
         ],
         "rule.control.name": "Utilize Three Synchronized Time Sources",
-        "rule.control.version": "v7 6.1",
+        "rule.control.version": "6.1",
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
@@ -3031,7 +3031,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3040,7 +3040,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3106,7 +3106,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3115,7 +3115,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3141,7 +3141,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3150,7 +3150,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3176,7 +3176,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3185,7 +3185,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3211,7 +3211,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3220,7 +3220,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3263,7 +3263,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3272,7 +3272,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3299,7 +3299,7 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -3308,7 +3308,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3372,7 +3372,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3381,7 +3381,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3403,7 +3403,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3412,7 +3412,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3449,7 +3449,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3458,7 +3458,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3488,7 +3488,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3497,7 +3497,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3527,7 +3527,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3536,7 +3536,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3566,7 +3566,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3575,7 +3575,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3605,7 +3605,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3614,7 +3614,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3644,7 +3644,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3653,7 +3653,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3683,7 +3683,7 @@
           "ig3"
         ],
         "rule.control.name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure",
-        "rule.control.version": "v8 4.2",
+        "rule.control.version": "4.2",
         "rule.control.description": "Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
       },
       {
@@ -3692,7 +3692,7 @@
           "ig3"
         ],
         "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
+        "rule.control.version": "9.2",
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
@@ -3742,12 +3742,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -3772,12 +3772,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -3827,12 +3827,12 @@
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
         "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v7 0.0",
+        "rule.control.version": "0.0",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],

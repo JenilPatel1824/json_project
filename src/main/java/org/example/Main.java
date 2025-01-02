@@ -40,7 +40,7 @@ public class Main {
             if(row.getCell(3).toString()!=""){
                 jsonObject.put("rule.name", row.getCell(3));}
             jsonObject.put("rule.catogary", "Network");
-            jsonObject.put("rule.type","Default");
+//            jsonObject.put("rule.type","Default");
                 //Rule context obj
             JSONObject rule_context = new JSONObject();
             if(row.getCell(11).toString()!="")
@@ -98,8 +98,8 @@ public class Main {
             else
                 version1="";
 
-            if(version1!=""){
-                control1.put("rule.control.version", version1);}
+            if(row.getCell(28).toString()!=""){
+                control1.put("rule.control.version", row.getCell(22));}
 
                         String input_title = row.getCell(18).toString();
                             String title;
@@ -155,8 +155,8 @@ public class Main {
             else
                 version2="";
 
-            if(version2!=""){
-                control2.put("rule.control.version", version2);}
+            if(row.getCell(28).toString()!=""){
+                control2.put("rule.control.version", row.getCell(28));}
 
             String input_title2 = row.getCell(19).toString();
             String title2;
@@ -200,14 +200,14 @@ public class Main {
                     }
                     if(!rules_ig2.isEmpty())
                         control2.put("rule.control.ig", rules_ig2);
-                rule_controls.put(control1);
-                rule_controls.put(control2);
+                    rule_controls.put(control1);
+                    rule_controls.put(control2);
             jsonObject.put("rule.controls", rule_controls);
             jsonObject.put("id", id++);
             jsonArray.put(jsonObject);
         }
         System.out.println(jsonArray);
-        FileWriter f=new FileWriter(new File("/home/jenil/Downloads/output.json"));
+        FileWriter f=new FileWriter(new File("/home/jenil/IdeaProjects/json_project/output.json"));
         f.write(jsonArray.toString());
         f.close();
 
