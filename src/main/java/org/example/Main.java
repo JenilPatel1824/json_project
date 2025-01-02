@@ -40,6 +40,7 @@ public class Main {
             if(row.getCell(3).toString()!=""){
                 jsonObject.put("rule.name", row.getCell(3));}
             jsonObject.put("rule.catogary", "Network");
+            jsonObject.put("rule.type","Default");
                 //Rule context obj
             JSONObject rule_context = new JSONObject();
             if(row.getCell(11).toString()!="")

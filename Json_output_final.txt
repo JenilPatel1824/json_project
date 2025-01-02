@@ -17,6 +17,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -63,6 +64,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "Only “the default method list is automatically applied to all interfaces except those that have a named method list explicitly defined. A defined method list overrides the default method list.” (1)",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -108,6 +110,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -148,6 +151,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "advance"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -193,6 +197,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -238,6 +243,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "Valid privilege level entries are integers from 0 through 15.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -284,6 +290,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -329,6 +336,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -375,6 +383,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -422,6 +431,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "When system accounting is used and the accounting server is unreachable at system startup time, the system will not be accessible for approximately two minutes.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -451,6 +461,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Access Rules",
     "rule.catogary": "Network",
@@ -468,10 +479,19 @@
     }
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'privilege 1' for local users",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations should create policies requiring all local accounts with 'privilege level 1' with encrypted passwords to reduce the risk of unauthorized access. Default configuration settings do not provide strong user authentication to the device.",
+    "rule.severity": "Critical",
+    "rule.description": "Sets the privilege level for the user.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/s1/sec-cr-t2-z.html#GUID-34B3E43E-0F79-40E8-82B6-A4B5F1AFF1AD",
+    "rule_context": {
+      "rule.conditions": [
+        {}
+      ]
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
@@ -484,23 +504,26 @@
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "Sets the privilege level for the user.",
     "rule.rationale": "Default device configuration does not require strong user authentication potentially enabling unfettered access to an attacker that is able to reach the device. Creating a local account with privilege level 1 permissions only allows the local user to access the device with EXEC-level permissions and will be unable to modify the device without using the enable password. In addition, require the use of an encrypted password as well (see Section 1.1.4.4 - Require Encrypted User Passwords).",
     "id": 10000000000012,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/s1/sec-cr-t2-z.html#GUID-34B3E43E-0F79-40E8-82B6-A4B5F1AFF1AD",
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Set 'transport input ssh' for 'line vty' connections",
+    "rule.impact": "To reduce risk of unauthorized access, organizations should require all VTY management line protocols to be limited to ssh.",
+    "rule.severity": "Critical",
+    "rule.description": "Selects the Secure Shell (SSH) protocol.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios/termserv/command/reference/tsv_s1.html#wp1069219",
     "rule_context": {
       "rule.conditions": [
         {}
-      ]
-    }
-  },
-  {
+      ],
+      "rule.check.type": "config file",
+      "rule.check.catagory": "advance"
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Set 'transport input ssh' for 'line vty' connections",
     "rule.catogary": "Network",
-    "rule.impact": "To reduce risk of unauthorized access, organizations should require all VTY management line protocols to be limited to ssh.",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -522,25 +545,26 @@
         "rule.control.description": "Use multi-factor authentication and encrypted channels for all administrative account access."
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "Selects the Secure Shell (SSH) protocol.",
     "rule.rationale": "Configuring VTY access control restricts remote access to only those authorized to manage the device and prevents unauthorized users from accessing the system.",
     "id": 10000000000013,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios/termserv/command/reference/tsv_s1.html#wp1069219",
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Set 'no exec' for 'line aux 0'",
+    "rule.impact": "Organizations can reduce the risk of unauthorized access by disabling the 'aux' port with the 'no exec' command. Conversely, not restricting access through the 'aux' port increases the risk of remote unauthorized access.",
+    "rule.severity": "Critical",
+    "rule.description": "The 'no exec' command restricts a line to outgoing connections only.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-429A2B8C-FC26-49C4-94C4-0FD99C32EC34",
     "rule_context": {
       "rule.conditions": [
         {}
       ],
       "rule.check.type": "config file",
       "rule.check.catagory": "advance"
-    }
-  },
-  {
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Set 'no exec' for 'line aux 0'",
     "rule.catogary": "Network",
-    "rule.impact": "Organizations can reduce the risk of unauthorized access by disabling the 'aux' port with the 'no exec' command. Conversely, not restricting access through the 'aux' port increases the risk of remote unauthorized access.",
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
@@ -557,62 +581,25 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "The 'no exec' command restricts a line to outgoing connections only.",
     "rule.rationale": "Unused ports should be disabled, if not required, since they provide a potential access path for attackers. Some devices include both an auxiliary and console port that can be used to locally connect to and configure the device. The console port is normally the primary port used to configure the device; even when remote, backup administration is required via console server or Keyboard, Video, Mouse (KVM) hardware. The auxiliary port is primarily used for dial-up administration via an external modem; instead, use other available methods.",
     "id": 10000000000014,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-429A2B8C-FC26-49C4-94C4-0FD99C32EC34",
-    "rule_context": {
-      "rule.conditions": [
-        {}
-      ],
-      "rule.check.type": "config file",
-      "rule.check.catagory": "advance"
-    }
+    "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Create 'access-list' for use with 'line vty'",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations can reduce the risk of unauthorized access by implementing access-lists for all VTY lines. Conversely, using VTY lines without access-lists increases the risk of unauthorized access.",
-    "rule.controls": [
-      {
-        "rule.control.ig": [
-          "ig3"
-        ],
-        "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
-        "rule.control.version": "v8 12.8",
-        "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
-      },
-      {
-        "rule.control.ig": [
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
-        "rule.control.version": "v7 11.7",
-        "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
-      }
-    ],
     "rule.severity": "Critical",
     "rule.description": "Access lists control the transmission of packets on an interface, control Virtual Terminal Line (VTY) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
-    "rule.rationale": "VTY ACLs control what addresses may attempt to log in to the router. Configuring VTY lines to use an ACL, restricts the sources where a user can manage the device. You should limit the specific host(s) and or network(s) authorized to connect to and configure the device, via an approved protocol, to those individuals or systems authorized to administer the device. For example, you could limit access to specific hosts, so that only network managers can configure the devices only by using specific network management workstations. Make sure you configure all VTY lines to use the same ACL.",
-    "id": 10000000000015,
-    "rule.auto.remediation": "no",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C",
     "rule_context": {
       "rule.conditions": [
         {}
       ],
       "rule.check.type": "cli"
-    }
-  },
-  {
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Set 'access-class' for 'line vty'",
     "rule.catogary": "Network",
-    "rule.impact": "Applying 'access'class' to line VTY further restricts remote access to only those devices authorized to manage the device and reduces the risk of unauthorized access. Conversely, using VTY lines with 'access class' restrictions increases the risks of unauthorized access.",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -632,11 +619,15 @@
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
+    "rule.rationale": "VTY ACLs control what addresses may attempt to log in to the router. Configuring VTY lines to use an ACL, restricts the sources where a user can manage the device. You should limit the specific host(s) and or network(s) authorized to connect to and configure the device, via an approved protocol, to those individuals or systems authorized to administer the device. For example, you could limit access to specific hosts, so that only network managers can configure the devices only by using specific network management workstations. Make sure you configure all VTY lines to use the same ACL.",
+    "id": 10000000000015,
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Set 'access-class' for 'line vty'",
+    "rule.impact": "Applying 'access'class' to line VTY further restricts remote access to only those devices authorized to manage the device and reduces the risk of unauthorized access. Conversely, using VTY lines with 'access class' restrictions increases the risks of unauthorized access.",
     "rule.severity": "Critical",
     "rule.description": "The 'access-class' setting restricts incoming and outgoing connections between a particular vty (into a Cisco device) and the networking devices associated with addresses in an access list.",
-    "rule.rationale": "Restricting the type of network devices, associated with the addresses on the access-list, further restricts remote access to those devices authorized to manage the device and reduces the risk of unauthorized access.",
-    "id": 10000000000016,
-    "rule.auto.remediation": "no",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-FB9BC58A-F00A-442A-8028-1E9E260E54D3",
     "rule_context": {
       "rule.conditions": [
@@ -644,13 +635,49 @@
       ],
       "rule.check.type": "config file",
       "rule.check.catagory": "advance"
-    }
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
+    "rule.controls": [
+      {
+        "rule.control.ig": [
+          "ig3"
+        ],
+        "rule.control.name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work",
+        "rule.control.version": "v8 12.8",
+        "rule.control.description": "Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access."
+      },
+      {
+        "rule.control.ig": [
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Manage Network Infrastructure Through a Dedicated Network",
+        "rule.control.version": "v7 11.7",
+        "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
+      }
+    ],
+    "rule.rationale": "Restricting the type of network devices, associated with the addresses on the access-list, further restricts remote access to those devices authorized to manage the device and reduces the risk of unauthorized access.",
+    "id": 10000000000016,
+    "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'exec-timeout' to less than or equal to 10 minutes for 'line aux 0'",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations should prevent unauthorized use of unattended or abandoned sessions by an automated control. Enabling 'exec-timeout' with an appropriate length of minutes or seconds prevents unauthorized access of abandoned sessions.",
+    "rule.severity": "Critical",
+    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419",
+    "rule_context": {
+      "rule.conditions": [
+        {}
+      ],
+      "rule.check.type": "config file",
+      "rule.check.catagory": "advance"
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -673,11 +700,15 @@
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
     "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
     "id": 10000000000017,
-    "rule.auto.remediation": "no",
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Set 'exec-timeout' to less than or equal to 10 minutes 'line console 0'",
+    "rule.impact": "Organizations should prevent unauthorized use of unattended or abandoned sessions by an automated control. Enabling 'exec-timeout' with an appropriate length reduces the risk of unauthorized access of abandoned sessions.",
+    "rule.severity": "Critical",
+    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419",
     "rule_context": {
       "rule.conditions": [
@@ -685,13 +716,10 @@
       ],
       "rule.check.type": "config file",
       "rule.check.catagory": "advance"
-    }
-  },
-  {
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Set 'exec-timeout' to less than or equal to 10 minutes 'line console 0'",
     "rule.catogary": "Network",
-    "rule.impact": "Organizations should prevent unauthorized use of unattended or abandoned sessions by an automated control. Enabling 'exec-timeout' with an appropriate length reduces the risk of unauthorized access of abandoned sessions.",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -714,65 +742,25 @@
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
     "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
     "id": 10000000000018,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419",
-    "rule_context": {
-      "rule.conditions": [
-        {}
-      ],
-      "rule.check.type": "config file",
-      "rule.check.catagory": "advance"
-    }
+    "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'exec-timeout' to less than or equal to 10 minutes 'line vty'",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations should prevent unauthorized use of unattended or abandoned sessions by an automated control. Enabling 'exec-timeout' with an appropriate length of minutes or seconds prevents unauthorized access of abandoned sessions.",
-    "rule.controls": [
-      {
-        "rule.control.ig": [
-          "ig1",
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "v8 4.3",
-        "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
-      },
-      {
-        "rule.control.ig": [
-          "ig1",
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "v7 16.11",
-        "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
-      }
-    ],
     "rule.severity": "Critical",
     "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
-    "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
-    "id": 10000000000019,
-    "rule.auto.remediation": "no",
     "rule.references": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/command/b_cisco_mds_9000_cr_book/l_commands.html#wp3716128869",
     "rule_context": {
       "rule.conditions": [
         {}
       ],
       "rule.check.type": "cli"
-    }
-  },
-  {
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Set 'transport input none' for 'line aux 0'",
     "rule.catogary": "Network",
-    "rule.impact": "Organizations should prevent all unauthorized access of auxiliary ports by disabling all protocols using the 'transport input none' command.",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -795,20 +783,53 @@
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
+    "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
+    "id": 10000000000019,
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Set 'transport input none' for 'line aux 0'",
+    "rule.impact": "Organizations should prevent all unauthorized access of auxiliary ports by disabling all protocols using the 'transport input none' command.",
     "rule.severity": "Critical",
     "rule.description": "When you want to allow only an outgoing connection on a line, use the no exec command.",
-    "rule.rationale": "Unused ports should be disabled, if not required, since they provide a potential access path for attackers. Some devices include both an auxiliary and console port that can be used to locally connect to and configure the device. The console port is normally the primary port used to configure the device; even when remote, backup administration is required via console server or Keyboard, Video, Mouse (KVM) hardware. The auxiliary port is primarily used for dial-up administration via an external modem; instead, use other available methods.",
-    "id": 10000000000020,
-    "rule.auto.remediation": "no",
     "rule.references": "http://www.cisco.com/en/US/docs/ios/termserv/command/reference/tsv_s1.html#wp1069219",
     "rule_context": {
       "rule.conditions": [
         {}
       ],
       "rule.check.type": "cli"
-    }
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
+    "rule.controls": [
+      {
+        "rule.control.ig": [
+          "ig1",
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
+        "rule.control.version": "v8 4.3",
+        "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
+      },
+      {
+        "rule.control.ig": [
+          "ig1",
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Lock Workstation Sessions After Inactivity",
+        "rule.control.version": "v7 16.11",
+        "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
+      }
+    ],
+    "rule.rationale": "Unused ports should be disabled, if not required, since they provide a potential access path for attackers. Some devices include both an auxiliary and console port that can be used to locally connect to and configure the device. The console port is normally the primary port used to configure the device; even when remote, backup administration is required via console server or Keyboard, Video, Mouse (KVM) hardware. The auxiliary port is primarily used for dial-up administration via an external modem; instead, use other available methods.",
+    "id": 10000000000020,
+    "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Set 'http Secure-server' limit",
     "rule.catogary": "Network",
@@ -843,6 +864,7 @@
     }
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -862,8 +884,24 @@
     }
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'exec-timeout' to less than or equal to 10 min on 'ip http'",
+    "rule.severity": "Critical",
+    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419",
+    "rule_context": {
+      "rule.conditions": [
+        {
+          "occurence": -1,
+          "condition": "contain",
+          "result.pattern": "ip http timeout-policy",
+          "operator": "none"
+        }
+      ],
+      "rule.check.type": "config file",
+      "rule.check.catagory": "basic"
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
       {
@@ -887,27 +925,13 @@
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
     "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.\n\nThis prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
     "rule.default.value": "disabled",
     "id": 10000000000023,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419",
-    "rule_context": {
-      "rule.conditions": [
-        {
-          "occurence": -1,
-          "condition": "contain",
-          "result.pattern": "ip http timeout-policy",
-          "operator": "none"
-        }
-      ],
-      "rule.check.type": "config file",
-      "rule.check.catagory": "basic"
-    }
+    "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Banner Rules",
     "rule.catogary": "Network",
@@ -943,6 +967,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "The default is no banner.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -990,6 +1015,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1037,6 +1063,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1078,6 +1105,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1108,6 +1136,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Password Rules",
     "rule.catogary": "Network",
@@ -1143,6 +1172,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "Note: You cannot recover a lost encrypted password. You must clear NVRAM and set a new password.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1191,6 +1221,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "Caution: This command does not provide a high level of network security. If you use this command, you should also take additional network security measures.\n\nNote: You cannot recover a lost encrypted password. You must clear NVRAM and set a new password.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1229,6 +1260,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1257,6 +1289,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "SNMP Rules",
     "rule.catogary": "Network",
@@ -1274,44 +1307,20 @@
     }
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'no snmp-server' to disable SNMP when unused",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations not using SNMP should require all SNMP services to be disabled by running the 'no snmp-server' command.",
-    "rule.controls": [
-      {
-        "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
-        "rule.control.description": "Explicitly Not Mapped"
-      },
-      {
-        "rule.control.ig": [
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
-        "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
-      }
-    ],
     "rule.severity": "Critical",
     "rule.description": "If not in use, disable simple network management protocol (SNMP), read and write access.",
-    "rule.rationale": "SNMP read access allows remote monitoring and management of the device.",
-    "id": 10000000000034,
-    "rule.auto.remediation": "no",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-book.html",
     "rule_context": {
       "rule.conditions": [
         {}
       ],
       "rule.check.type": "cli"
-    }
-  },
-  {
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Unset 'private' for 'snmp-server community'",
     "rule.catogary": "Network",
-    "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable default, easy to guess, settings such as the 'private' setting for snmp-server community.",
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
@@ -1328,58 +1337,60 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
+    "rule.rationale": "SNMP read access allows remote monitoring and management of the device.",
+    "id": 10000000000034,
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Unset 'private' for 'snmp-server community'",
+    "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable default, easy to guess, settings such as the 'private' setting for snmp-server community.",
     "rule.severity": "Critical",
     "rule.description": "An SNMP community string permits read-only access to all objects.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
+    "rule_context": {
+      "rule.conditions": [
+        {}
+      ],
+      "rule.check.type": "cli"
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
+    "rule.controls": [
+      {
+        "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "v8 0.0",
+        "rule.control.description": "Explicitly Not Mapped"
+      },
+      {
+        "rule.control.ig": [
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
+        "rule.control.version": "v7 9.2",
+        "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
+      }
+    ],
     "rule.rationale": "The default community string \"private\" is well known. Using easy to guess, well known community string poses a threat that an attacker can effortlessly gain unauthorized access to the device.",
     "id": 10000000000035,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
-    "rule_context": {
-      "rule.conditions": [
-        {}
-      ],
-      "rule.check.type": "cli"
-    }
+    "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Unset 'public' for 'snmp-server community'",
-    "rule.catogary": "Network",
     "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable default, easy to guess, settings such as the 'public' setting for snmp-server community.",
-    "rule.controls": [
-      {
-        "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.version": "v8 0.0",
-        "rule.control.description": "Explicitly Not Mapped"
-      },
-      {
-        "rule.control.ig": [
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "v7 9.2",
-        "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
-      }
-    ],
     "rule.severity": "Critical",
     "rule.description": "An SNMP community string permits read-only access to all objects.",
-    "rule.rationale": "The default community string \"public\" is well known. Using easy to guess, well known community string poses a threat that an attacker can effortlessly gain unauthorized access to the device.",
-    "id": 10000000000036,
-    "rule.auto.remediation": "no",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
     "rule_context": {
       "rule.conditions": [
         {}
       ],
       "rule.check.type": "cli"
-    }
-  },
-  {
+    },
+    "rule.type": "Default",
     "rule.tags": "tags",
-    "rule.name": "Do not set 'RW' for any 'snmp-server community'",
     "rule.catogary": "Network",
-    "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable the SNMP 'write' access for snmp-server community.",
     "rule.controls": [
       {
         "rule.control.name": "Explicitly Not Mapped",
@@ -1396,11 +1407,15 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
+    "rule.rationale": "The default community string \"public\" is well known. Using easy to guess, well known community string poses a threat that an attacker can effortlessly gain unauthorized access to the device.",
+    "id": 10000000000036,
+    "rule.auto.remediation": "no"
+  },
+  {
+    "rule.name": "Do not set 'RW' for any 'snmp-server community'",
+    "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable the SNMP 'write' access for snmp-server community.",
     "rule.severity": "Critical",
     "rule.description": "Specifies read-write access. Authorized management stations can both retrieve and modify MIB objects.",
-    "rule.rationale": "Enabling SNMP read-write enables remote management of the device. Unless absolutely necessary, do not allow simple network management protocol (SNMP) write access.",
-    "id": 10000000000037,
-    "rule.auto.remediation": "no",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
     "rule_context": {
       "rule.conditions": [
@@ -1413,7 +1428,29 @@
       ],
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
-    }
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
+    "rule.controls": [
+      {
+        "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "v8 0.0",
+        "rule.control.description": "Explicitly Not Mapped"
+      },
+      {
+        "rule.control.ig": [
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
+        "rule.control.version": "v7 9.2",
+        "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
+      }
+    ],
+    "rule.rationale": "Enabling SNMP read-write enables remote management of the device. Unless absolutely necessary, do not allow simple network management protocol (SNMP) write access.",
+    "id": 10000000000037,
+    "rule.auto.remediation": "no"
   },
   {
     "rule.name": "Set the ACL for each 'snmp-server community'",
@@ -1433,6 +1470,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1460,8 +1498,18 @@
     "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Create an 'access-list' for use with SNMP",
+    "rule.severity": "Critical",
+    "rule.description": "You can use access lists to control the transmission of packets on an interface, control Simple Network Management Protocol (SNMP) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C",
+    "rule_context": {
+      "rule.conditions": [
+        {}
+      ],
+      "rule.check.type": "cli"
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
       {
@@ -1482,19 +1530,10 @@
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
-    "rule.severity": "Critical",
-    "rule.description": "You can use access lists to control the transmission of packets on an interface, control Simple Network Management Protocol (SNMP) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
     "rule.rationale": "SNMP ACLs control what addresses are authorized to manage and monitor the device via SNMP. If ACLs are not applied, then anyone with a valid SNMP community string may monitor and manage the router. An ACL should be defined and applied for all SNMP community strings to limit access to a small number of authorized management stations segmented in a trusted management zone.",
     "rule.default.value": "SNMP does not use an access list.",
     "id": 10000000000039,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C",
-    "rule_context": {
-      "rule.conditions": [
-        {}
-      ],
-      "rule.check.type": "cli"
-    }
+    "rule.auto.remediation": "no"
   },
   {
     "rule.name": "Set 'snmp-server host' when using SNMP",
@@ -1514,6 +1553,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1558,6 +1598,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1602,6 +1643,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1639,6 +1681,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1667,6 +1710,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Control Plane",
     "rule.catogary": "Network",
@@ -1684,6 +1728,7 @@
     }
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Global Service Rules",
     "rule.catogary": "Network",
@@ -1712,6 +1757,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1753,6 +1799,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1794,6 +1841,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1835,6 +1883,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1876,6 +1925,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1917,6 +1967,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1958,6 +2009,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -1982,6 +2034,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Setup SSH",
     "rule.catogary": "Network",
@@ -2010,6 +2063,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2030,6 +2084,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Configure Prerequisites for the SSH Service",
     "rule.catogary": "Network",
@@ -2064,6 +2119,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2101,6 +2157,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2132,6 +2189,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2172,6 +2230,7 @@
       "rule.check.type": "cli"
     },
     "rule.additional.information": "This cannot exceed 120 seconds.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2213,6 +2272,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2233,6 +2293,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Logging Rules",
     "rule.catogary": "Network",
@@ -2267,6 +2328,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2312,6 +2374,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2357,6 +2420,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "The console is a slow display device. In message storms some logging messages may be silently dropped when the console queue becomes full. Set severity levels accordingly.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2396,6 +2460,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2435,6 +2500,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2480,6 +2546,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2525,6 +2592,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2553,6 +2621,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Set 'login success/failure logging'",
     "rule.catogary": "Network",
@@ -2596,6 +2665,7 @@
     }
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2616,6 +2686,7 @@
     }
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "NTP Rules",
     "rule.catogary": "Network",
@@ -2644,6 +2715,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2672,6 +2744,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Require Encryption Keys for NTP",
     "rule.catogary": "Network",
@@ -2706,6 +2779,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2751,6 +2825,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2796,6 +2871,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2824,10 +2900,25 @@
     "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'key' for each 'ntp server'",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations should establish three Network Time Protocol (NTP) hosts to set consistent time across the enterprise. Enabling the 'ntp server key' command enforces encrypted authentication between NTP hosts.",
+    "rule.severity": "High",
+    "rule.description": "Specifies the authentication key for NTP.",
+    "rule_context": {
+      "rule.conditions": [
+        {
+          "occurence": -1,
+          "condition": "contain",
+          "result.pattern": "ntp server",
+          "operator": "none"
+        }
+      ],
+      "rule.check.type": "config file",
+      "rule.check.catagory": "basic"
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -2848,26 +2939,13 @@
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
-    "rule.severity": "High",
-    "rule.description": "Specifies the authentication key for NTP.",
     "rule.rationale": "This authentication feature provides protection against accidentally synchronizing the ntp system to another system that is not trusted, because the other system must know the correct authentication key.",
     "rule.default.value": "No NTP key is set by default",
     "id": 10000000000077,
-    "rule.auto.remediation": "no",
-    "rule_context": {
-      "rule.conditions": [
-        {
-          "occurence": -1,
-          "condition": "contain",
-          "result.pattern": "ntp server",
-          "operator": "none"
-        }
-      ],
-      "rule.check.type": "config file",
-      "rule.check.catagory": "basic"
-    }
+    "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Loopback Rules",
     "rule.catogary": "Network",
@@ -2896,6 +2974,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -2920,10 +2999,26 @@
     "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set AAA 'source-interface'",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations should design and implement authentication, authorization, and accounting (AAA) services for effective monitoring of enterprise network devices. Binding AAA services to the source-interface loopback enables these services.",
+    "rule.severity": "High",
+    "rule.description": "Force AAA to use the IP address of a specified interface for all outgoing AAA packets",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i2.html#GUID-22E8B211-751F-48E0-9C76-58F0FE0AABA8:http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-54A00318-CF69-46FC-9ADC-313BFC436713",
+    "rule_context": {
+      "rule.conditions": [
+        {
+          "occurence": -1,
+          "condition": "contain",
+          "result.pattern": ".*(radius|tacacs) source-interface.*",
+          "operator": "none"
+        }
+      ],
+      "rule.check.type": "config file",
+      "rule.check.catagory": "basic"
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -2944,24 +3039,9 @@
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
-    "rule.severity": "High",
-    "rule.description": "Force AAA to use the IP address of a specified interface for all outgoing AAA packets",
     "rule.rationale": "This is required so that the AAA server (RADIUS or TACACS+) can easily identify routers and authenticate requests by their IP address.",
     "id": 10000000000080,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i2.html#GUID-22E8B211-751F-48E0-9C76-58F0FE0AABA8:http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-54A00318-CF69-46FC-9ADC-313BFC436713",
-    "rule_context": {
-      "rule.conditions": [
-        {
-          "occurence": -1,
-          "condition": "contain",
-          "result.pattern": ".*(radius|tacacs) source-interface.*",
-          "operator": "none"
-        }
-      ],
-      "rule.check.type": "config file",
-      "rule.check.catagory": "basic"
-    }
+    "rule.auto.remediation": "no"
   },
   {
     "rule.name": "Set 'ntp source' to Loopback Interface",
@@ -2981,6 +3061,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3026,6 +3107,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3050,6 +3132,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Data Plane",
     "rule.catogary": "Network",
@@ -3067,6 +3150,7 @@
     }
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Routing Rules",
     "rule.catogary": "Network",
@@ -3101,6 +3185,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "basic"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3136,6 +3221,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3171,6 +3257,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3206,6 +3293,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3230,6 +3318,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Border Router Filtering",
     "rule.catogary": "Network",
@@ -3258,6 +3347,7 @@
       ],
       "rule.check.type": "cli"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3294,6 +3384,7 @@
       "rule.check.type": "config file",
       "rule.check.catagory": "advance"
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3318,6 +3409,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Neighbor Authentication",
     "rule.catogary": "Network",
@@ -3335,6 +3427,7 @@
     }
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Require EIGRP Authentication if Protocol is Used",
     "rule.catogary": "Network",
@@ -3362,6 +3455,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3391,10 +3485,19 @@
     "rule.auto.remediation": "no"
   },
   {
-    "rule.tags": "tags",
     "rule.name": "Set 'key'",
-    "rule.catogary": "Network",
     "rule.impact": "Organizations should plan and implement enterprise security policies that require rigorous authentication methods for routing protocols. Using 'key numbers' for key chains for routing protocols enforces these policies.",
+    "rule.severity": "Medium",
+    "rule.description": "Configure an authentication key on a key chain.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_pi/command/iri-cr-a1.html#GUID-3F31B2E0-0E4B-4F49-A4A8-8ADA1CA0D73F",
+    "rule_context": {
+      "rule.conditions": [
+        {}
+      ]
+    },
+    "rule.type": "Default",
+    "rule.tags": "tags",
+    "rule.catogary": "Network",
     "rule.controls": [
       {
         "rule.control.ig": [
@@ -3416,17 +3519,9 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
-    "rule.severity": "Medium",
-    "rule.description": "Configure an authentication key on a key chain.",
     "rule.rationale": "This is part of the routing authentication setup",
     "id": 10000000000095,
-    "rule.auto.remediation": "no",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_pi/command/iri-cr-a1.html#GUID-3F31B2E0-0E4B-4F49-A4A8-8ADA1CA0D73F",
-    "rule_context": {
-      "rule.conditions": [
-        {}
-      ]
-    }
+    "rule.auto.remediation": "no"
   },
   {
     "rule.name": "Set 'key-string'",
@@ -3439,6 +3534,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3478,6 +3574,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3517,6 +3614,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3556,6 +3654,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3595,6 +3694,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3634,6 +3734,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3673,6 +3774,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3702,6 +3804,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Require OSPF Authentication if Protocol is Used",
     "rule.catogary": "Network",
@@ -3737,6 +3840,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "The authentication type must be the same for all routers and access servers in an area. The authentication password for all OSPF routers on a network must be the same if they are to communicate with each other via OSPF",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3767,6 +3871,7 @@
         {}
       ]
     },
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
@@ -3787,6 +3892,7 @@
     "rule.auto.remediation": "no"
   },
   {
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.name": "Require BGP Authentication if Protocol is Used",
     "rule.catogary": "Network",
@@ -3822,6 +3928,7 @@
       "rule.check.catagory": "basic"
     },
     "rule.additional.information": "MD5 authentication between two BGP peers, meaning that each segment sent on the TCP connection between the peers is verified. MD5 authentication must be configured with the same password on both BGP peers.",
+    "rule.type": "Default",
     "rule.tags": "tags",
     "rule.catogary": "Network",
     "rule.controls": [
