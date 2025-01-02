@@ -5,6 +5,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "This command enables the AAA access control system.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-E05C2E00-C01E-4053-9D12-EC37C7E8EEC5",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -96,6 +97,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Authenticates users who access privileged EXEC mode when they use the enable command.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a1.html#GUID-4171D649-2973-4707-95F3-9D96971893D0",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -141,6 +143,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "If account management functions are not automatically enforced, an attacker could gain privileged access to a vital element of the network security architecture",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-k1.html#GUID-297BDF33-4841-441C-83F3-4DA51C3C7284",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -185,6 +188,7 @@
     "rule.impact": "Enabling 'aaa accounting' for privileged commands records and sends activity to the accounting servers and enables organizations to monitor and analyze privileged activity.",
     "rule.severity": "HIGH",
     "rule.description": "Runs accounting for all commands at the specified privilege level.",
+    "rule.references": "",
     "rule.additional.information": "Valid privilege level entries are integers from 0 through 15.",
     "rule.tags": [],
     "rule.context": {
@@ -232,6 +236,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Provides information about all outbound connections made from the network access server.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a1.html#GUID-0520BCEF-89FB-4505-A5DF-D7F1389F1BBA",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -277,6 +282,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Runs accounting for the EXEC shell session.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a1.html#GUID-0520BCEF-89FB-4505-A5DF-D7F1389F1BBA",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -323,6 +329,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Runs accounting for all network-related service requests.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a1.html#GUID-0520BCEF-89FB-4505-A5DF-D7F1389F1BBA",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -411,48 +418,70 @@
     "rule.auto.remediation": "Configure AAA accounting system.\n```\nhostname(config)#aaa accounting system {default | list-name | guarantee-first} \n{start-stop | stop-only | none} {radius | group group-name}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Access Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Rules in the access class enforce controls for device administrative connections.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Rules in the access class enforce controls for device administrative connections.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000010,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'privilege 1' for local users",
     "rule.impact": "Organizations should create policies requiring all local accounts with 'privilege level 1' with encrypted passwords to reduce the risk of unauthorized access. Default configuration settings do not provide strong user authentication to the device.",
+    "rule.severity": "CRITICAL",
+    "rule.description": "Sets the privilege level for the user.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/s1/sec-cr-t2-z.html#GUID-34B3E43E-0F79-40E8-82B6-A4B5F1AFF1AD",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "Sets the privilege level for the user.",
     "rule.rationale": "Default device configuration does not require strong user authentication potentially enabling unfettered access to an attacker that is able to reach the device. Creating a local account with privilege level 1 permissions only allows the local user to access the device with EXEC-level permissions and will be unable to modify the device without using the enable password. In addition, require the use of an encrypted password as well (see Section 1.1.4.4 - Require Encrypted User Passwords).",
+    "rule.default.value": "",
     "id": 10000000000011,
     "rule.category": "Network",
-    "rule.auto.remediation": "Set the local user to privilege level 1.\n```\nhostname(config)#username <LOCAL_USERNAME> privilege 1 \n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/s1/sec-cr-t2-z.html#GUID-34B3E43E-0F79-40E8-82B6-A4B5F1AFF1AD"
+    "rule.auto.remediation": "Set the local user to privilege level 1.\n```\nhostname(config)#username <LOCAL_USERNAME> privilege 1 \n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Create 'access-list' for use with 'line vty'",
     "rule.impact": "Organizations can reduce the risk of unauthorized access by implementing access-lists for all VTY lines. Conversely, using VTY lines without access-lists increases the risk of unauthorized access.",
+    "rule.severity": "CRITICAL",
+    "rule.description": "Access lists control the transmission of packets on an interface, control Virtual Terminal Line (VTY) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -473,59 +502,24 @@
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "Access lists control the transmission of packets on an interface, control Virtual Terminal Line (VTY) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
     "rule.rationale": "VTY ACLs control what addresses may attempt to log in to the router. Configuring VTY lines to use an ACL, restricts the sources where a user can manage the device. You should limit the specific host(s) and or network(s) authorized to connect to and configure the device, via an approved protocol, to those individuals or systems authorized to administer the device. For example, you could limit access to specific hosts, so that only network managers can configure the devices only by using specific network management workstations. Make sure you configure all VTY lines to use the same ACL.",
+    "rule.default.value": "",
     "id": 10000000000012,
     "rule.category": "Network",
-    "rule.auto.remediation": "Configure the VTY ACL that will be used to restrict management access to the device.\n```\nhostname(config)#access-list <vty_acl_number> permit tcp <vty_acl_block_with_mask> any\nhostname(config)#access-list <vty_acl_number> permit tcp host <vty_acl_host> any\nhostname(config)#deny ip any any log\n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C"
+    "rule.auto.remediation": "Configure the VTY ACL that will be used to restrict management access to the device.\n```\nhostname(config)#access-list <vty_acl_number> permit tcp <vty_acl_block_with_mask> any\nhostname(config)#access-list <vty_acl_number> permit tcp host <vty_acl_host> any\nhostname(config)#deny ip any any log\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'exec-timeout' to less than or equal to 10 minutes 'line vty'",
     "rule.impact": "Organizations should prevent unauthorized use of unattended or abandoned sessions by an automated control. Enabling 'exec-timeout' with an appropriate length of minutes or seconds prevents unauthorized access of abandoned sessions.",
-    "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
-    },
-    "rule.controls": [
-      {
-        "rule.control.ig": [
-          "ig1",
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
-        "rule.control.version": "4.3",
-        "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
-      },
-      {
-        "rule.control.ig": [
-          "ig1",
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Lock Workstation Sessions After Inactivity",
-        "rule.control.version": "16.11",
-        "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
-      }
-    ],
     "rule.severity": "CRITICAL",
     "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
-    "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
-    "id": 10000000000013,
-    "rule.category": "Network",
-    "rule.auto.remediation": "Configure device timeout (10 minutes or less) to disconnect sessions after a fixed idle time.\n```\nhostname(config)#line vty {line_number} [ending_line_number]\nhostname(config-line)#exec-timeout <<span>timeout_in_minutes> <timeout_in_seconds</span>>\n```",
-    "rule.references": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/command/b_cisco_mds_9000_cr_book/l_commands.html#wp3716128869"
-  },
-  {
+    "rule.references": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/command/b_cisco_mds_9000_cr_book/l_commands.html#wp3716128869",
+    "rule.additional.information": "",
     "rule.tags": [],
-    "rule.name": "Set 'transport input none' for 'line aux 0'",
-    "rule.impact": "Organizations should prevent all unauthorized access of auxiliary ports by disabling all protocols using the 'transport input none' command.",
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -549,23 +543,68 @@
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "When you want to allow only an outgoing connection on a line, use the no exec command.",
-    "rule.rationale": "Unused ports should be disabled, if not required, since they provide a potential access path for attackers. Some devices include both an auxiliary and console port that can be used to locally connect to and configure the device. The console port is normally the primary port used to configure the device; even when remote, backup administration is required via console server or Keyboard, Video, Mouse (KVM) hardware. The auxiliary port is primarily used for dial-up administration via an external modem; instead, use other available methods.",
-    "id": 10000000000014,
+    "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
+    "rule.default.value": "",
+    "id": 10000000000013,
     "rule.category": "Network",
-    "rule.auto.remediation": "Disable the inbound connections on the auxiliary port.\n```\nhostname(config)#line aux 0\nhostname(config-line)#transport input none \n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios/termserv/command/reference/tsv_s1.html#wp1069219"
+    "rule.auto.remediation": "Configure device timeout (10 minutes or less) to disconnect sessions after a fixed idle time.\n```\nhostname(config)#line vty {line_number} [ending_line_number]\nhostname(config-line)#exec-timeout <<span>timeout_in_minutes> <timeout_in_seconds</span>>\n```"
   },
   {
+    "rule.name": "Set 'transport input none' for 'line aux 0'",
+    "rule.impact": "Organizations should prevent all unauthorized access of auxiliary ports by disabling all protocols using the 'transport input none' command.",
+    "rule.severity": "CRITICAL",
+    "rule.description": "When you want to allow only an outgoing connection on a line, use the no exec command.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios/termserv/command/reference/tsv_s1.html#wp1069219",
+    "rule.additional.information": "",
     "rule.tags": [],
+    "rule.context": {
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
+    },
+    "rule.controls": [
+      {
+        "rule.control.ig": [
+          "ig1",
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Configure Automatic Session Locking on Enterprise Assets",
+        "rule.control.version": "4.3",
+        "rule.control.description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes."
+      },
+      {
+        "rule.control.ig": [
+          "ig1",
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Lock Workstation Sessions After Inactivity",
+        "rule.control.version": "16.11",
+        "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
+      }
+    ],
+    "rule.rationale": "Unused ports should be disabled, if not required, since they provide a potential access path for attackers. Some devices include both an auxiliary and console port that can be used to locally connect to and configure the device. The console port is normally the primary port used to configure the device; even when remote, backup administration is required via console server or Keyboard, Video, Mouse (KVM) hardware. The auxiliary port is primarily used for dial-up administration via an external modem; instead, use other available methods.",
+    "rule.default.value": "",
+    "id": 10000000000014,
+    "rule.category": "Network",
+    "rule.auto.remediation": "Disable the inbound connections on the auxiliary port.\n```\nhostname(config)#line aux 0\nhostname(config-line)#transport input none \n```"
+  },
+  {
     "rule.name": "Set 'http Secure-server' limit",
+    "rule.impact": "",
+    "rule.severity": "CRITICAL",
+    "rule.description": "Device management includes the ability to control the number of administrators and management sessions that manage a device. Limiting the number of allowed administrators and sessions per administrator based on account type, role, or access type is helpful in limiting risks related to denial-of-service (DoS) attacks.",
+    "rule.references": "NIST SP 800-53 :: AC-10:https://www.tenable.com/audits/items/DISA_STIG_Cisco_IOS_XE_Switch_NDM_v2r1.audit:392b7a414732407810fa9d87c5a0d581",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
       "rule.conditions": [
         {
           "condition": "contain",
           "result.pattern": "ip http secure-server",
+          "occurrence": 1,
           "operator": "NONE"
         }
       ],
@@ -573,40 +612,59 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "Device management includes the ability to control the number of administrators and management sessions that manage a device. Limiting the number of allowed administrators and sessions per administrator based on account type, role, or access type is helpful in limiting risks related to denial-of-service (DoS) attacks.",
     "rule.rationale": "This requirement addresses concurrent sessions for administrative accounts and does not address concurrent sessions by a single administrator via multiple administrative accounts. The maximum number of concurrent sessions should be defined based upon mission needs and the operational environment for each system. At a minimum, limits must be set for SSH, HTTPS, account of last resort, and root account sessions. Center for Internet Security recommends a limit of 2",
+    "rule.default.value": "",
     "id": 10000000000015,
     "rule.category": "Network",
-    "rule.auto.remediation": "```\nhostname(config)#ip http max-connections 2\n```",
-    "rule.references": "NIST SP 800-53 :: AC-10:https://www.tenable.com/audits/items/DISA_STIG_Cisco_IOS_XE_Switch_NDM_v2r1.audit:392b7a414732407810fa9d87c5a0d581"
+    "rule.auto.remediation": "```\nhostname(config)#ip http max-connections 2\n```"
   },
   {
+    "rule.name": "",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "",
+    "rule.references": "",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
+      "rule.check.category": "",
       "rule.conditions": [
         {
           "condition": "contain",
           "result.pattern": "ip http max-connections \\d+",
+          "occurrence": 1,
           "operator": "AND"
         }
-      ]
+      ],
+      "rule.check.type": ""
     },
     "rule.controls": [],
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000016,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'exec-timeout' to less than or equal to 10 min on 'ip http'",
+    "rule.impact": "",
+    "rule.severity": "CRITICAL",
+    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
       "rule.conditions": [
@@ -641,25 +699,31 @@
         "rule.control.description": "Automatically lock workstation sessions after a standard period of inactivity."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "If no input is detected during the interval, the EXEC facility resumes the current connection. If no connections exist, the EXEC facility returns the terminal to the idle state and disconnects the incoming session.",
     "rule.rationale": "This prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.\n\nThis prevents unauthorized users from misusing abandoned sessions. For example, if the network administrator leaves for the day and leaves a computer open with an enabled login session accessible. There is a trade-off here between security (shorter timeouts) and usability (longer timeouts). Review your local policies and operational needs to determine the best timeout value. In most cases, this should be no more than 10 minutes.",
     "rule.default.value": "disabled",
     "id": 10000000000017,
     "rule.category": "Network",
-    "rule.auto.remediation": "Configure device timeout (10 minutes or less) to disconnect sessions after a fixed idle time.\n```\nip http timeout-policy idle 600 life {nnnn} requests {nn}\n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/D_through_E.html#GUID-76805E6F-9E89-4457-A9DC-5944C8FE5419"
+    "rule.auto.remediation": "Configure device timeout (10 minutes or less) to disconnect sessions after a fixed idle time.\n```\nip http timeout-policy idle 600 life {nnnn} requests {nn}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Banner Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Rules in the banner class communicate legal rights to users.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Rules in the banner class communicate legal rights to users.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000018,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set the 'banner-text' for 'banner exec'",
@@ -715,6 +779,7 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Follow the banner login command with one or more blank spaces and a delimiting character of your choice. Then enter one or more lines of text, terminating the message with the second occurrence of the delimiting character.\n\nWhen a user connects to the router, the message-of-the-day (MOTD) banner (if configured) appears first, followed by the login banner and prompts. After the user successfully logs in to the router, the EXEC banner or incoming banner will be displayed, depending on the type of connection. For a reverse Telnet login, the incoming banner will be displayed. For all other connections, the router will display the EXEC banner.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/A_through_B.html#GUID-FF0B6890-85B8-4B6A-90DD-1B7140C5D22F",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -762,6 +827,7 @@
     "rule.severity": "MEDIUM",
     "rule.description": "This MOTD banner is displayed to all terminals connected and is useful for sending messages that affect all users (such as impending system shutdowns). Use the no exec-banner or no motd-banner command to disable the MOTD banner on a line. The no exec-banner command also disables the EXEC banner on the line.\n\nWhen a user connects to the router, the MOTD banner appears before the login prompt. After the user logs in to the router, the EXEC banner or incoming banner will be displayed, depending on the type of connection. For a reverse Telnet login, the incoming banner will be displayed. For all other connections, the router will display the EXEC banner.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/A_through_B.html#GUID-7416C789-9561-44FC-BB2A-D8D8AFFB77DD",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -805,53 +871,28 @@
   },
   {
     "rule.name": "Set the 'banner-text' for 'webauth banner'",
-    "rule.impact": "Organizations provide appropriate legal notice(s) and warning(s) to persons accessing their networks by using a 'banner-text' for the banner motd command.",
-    "rule.severity": "MEDIUM",
-    "rule.description": "This banner is displayed to all terminals connected and is useful for sending messages that affect all users (such as impending system shutdowns). Use the no exec-banner or no motd-banner command to disable the banner on a line. The no exec-banner command also disables the EXEC banner on the line.\n\nWhen a user connects to the router, the MOTD banner appears before the login prompt. After the user logs in to the router, the EXEC banner or incoming banner will be displayed, depending on the type of connection. For a reverse Telnet login, the incoming banner will be displayed. For all other connections, the router will display the EXEC banner.",
-    "rule.references": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9500/software/release/16-9/configuration_guide/sec/b_169_sec_9500_cg/configuring_web_based_authentication.html",
-    "rule.tags": [],
-    "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
-    },
-    "rule.controls": [
-      {
-        "rule.control.ig": [
-          "ig1",
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Establish and Maintain a Security Awareness Program",
-        "rule.control.version": "14.1",
-        "rule.control.description": "Establish and maintain a security awareness program. The purpose of a security awareness program is to educate the enterprise’s workforce on how to interact with enterprise assets and data in a secure manner. Conduct training at hire and, at a minimum, annually. Review and update content annually, or when significant enterprise changes occur that could impact this Safeguard."
-      },
-      {
-        "rule.control.ig": [
-          "ig1",
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Implement a Security Awareness Program",
-        "rule.control.version": "17.3",
-        "rule.control.description": "Create a security awareness program for all workforce members to complete on a regular basis to ensure they understand and exhibit the necessary behaviors and skills to help ensure the security of the organization. The organization's security awareness program should be communicated in a continuous and engaging manner."
-      }
-    ],
-    "rule.rationale": "\"Network banners are electronic messages that provide notice of legal rights to users of computer networks. From a legal standpoint, banners have four primary functions.\n\n- First, banners may be used to generate consent to real-time monitoring under Title III.\n- Second, banners may be used to generate consent to the retrieval of stored files and records pursuant to ECPA.\n- Third, in the case of government networks, banners may eliminate any Fourth Amendment \"reasonable expectation of privacy\" that government employees or other users might otherwise retain in their use of the government's network under O'Connor v. Ortega, 480 U.S. 709 (1987).\n- Fourth, in the case of a non-government network, banners may establish a system administrator's \"common authority\" to consent to a law enforcement search pursuant to United States v. Matlock, 415 U.S. 164 (1974).\" (US Department of Justice APPENDIX A: Sample Network Banner Language)",
-    "rule.default.value": "No banner is set by default",
     "id": 10000000000022,
-    "rule.category": "Network",
-    "rule.auto.remediation": "Configure the webauth banner presented when a user connects to the device.\n```\nhostname(config)#ip admission auth-proxy-banner http {banner-text | filepath}\n```"
+    "rule.category": "Network"
   },
   {
-    "rule.tags": [],
     "rule.name": "Password Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Rules in the password class enforce secure, local device authentication credentials.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Rules in the password class enforce secure, local device authentication credentials.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000023,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'password' for 'enable secret'",
@@ -953,9 +994,12 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Username secret password type 5 and enable secret password type 5 must be migrated to the stronger password type 8 or 9. IF a device is upgraded from IOS XE 16.9 or later the type 5 is auto converted to type 9. \n\nThe username secret command provides an additional layer of security over the username password.",
     "rule.references": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9600/software/release/16-12/configuration_guide/sec/b_1612_sec_9600_cg/controlling_switch_access_with_passwords_and_privilege_levels.html",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -984,58 +1028,79 @@
     "rule.auto.remediation": "Create a local user with an encrypted, complex (not easily guessed) password.\n```\n\nhostname(config)#username {{em}LOCAL_USERNAME{/em}} secret {{em}LOCAL_PASSWORD{/em}}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "SNMP Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Simple Network Management Protocol (SNMP) provides a standards-based interface to manage and monitor network devices. This section provides guidance on the secure configuration of SNMP parameters.\n\nThe recommendations in this Section apply to Organizations using SNMP. Organizations using SNMP should review and implement the recommendations in this section.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Simple Network Management Protocol (SNMP) provides a standards-based interface to manage and monitor network devices. This section provides guidance on the secure configuration of SNMP parameters.\n\nThe recommendations in this Section apply to Organizations using SNMP. Organizations using SNMP should review and implement the recommendations in this section.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000027,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'no snmp-server' to disable SNMP when unused",
     "rule.impact": "Organizations not using SNMP should require all SNMP services to be disabled by running the 'no snmp-server' command.",
-    "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
-    },
-    "rule.controls": [
-      {
-        "rule.control.name": "Explicitly Not Mapped",
-        "rule.control.description": "Explicitly Not Mapped"
-      },
-      {
-        "rule.control.ig": [
-          "ig2",
-          "ig3"
-        ],
-        "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
-        "rule.control.version": "9.2",
-        "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
-      }
-    ],
     "rule.severity": "CRITICAL",
     "rule.description": "If not in use, disable simple network management protocol (SNMP), read and write access.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-book.html",
+    "rule.additional.information": "",
+    "rule.tags": [],
+    "rule.context": {
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
+    },
+    "rule.controls": [
+      {
+        "rule.control.ig": [],
+        "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
+        "rule.control.description": "Explicitly Not Mapped"
+      },
+      {
+        "rule.control.ig": [
+          "ig2",
+          "ig3"
+        ],
+        "rule.control.name": "Ensure Only Approved Ports, Protocols and Services Are Running",
+        "rule.control.version": "9.2",
+        "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
+      }
+    ],
     "rule.rationale": "SNMP read access allows remote monitoring and management of the device.",
+    "rule.default.value": "",
     "id": 10000000000028,
     "rule.category": "Network",
-    "rule.auto.remediation": "Disable SNMP read and write access if not in used to monitor and/or manage device.\n```\nhostname(config)#no snmp-server \n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-book.html"
+    "rule.auto.remediation": "Disable SNMP read and write access if not in used to monitor and/or manage device.\n```\nhostname(config)#no snmp-server \n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Unset 'private' for 'snmp-server community'",
     "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable default, easy to guess, settings such as the 'private' setting for snmp-server community.",
+    "rule.severity": "CRITICAL",
+    "rule.description": "An SNMP community string permits read-only access to all objects.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1048,25 +1113,30 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "An SNMP community string permits read-only access to all objects.",
     "rule.rationale": "The default community string \"private\" is well known. Using easy to guess, well known community string poses a threat that an attacker can effortlessly gain unauthorized access to the device.",
+    "rule.default.value": "",
     "id": 10000000000029,
     "rule.category": "Network",
-    "rule.auto.remediation": "Disable the default SNMP community string `private`\n```\nhostname(config)#no snmp-server community {private}\n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE"
+    "rule.auto.remediation": "Disable the default SNMP community string `private`\n```\nhostname(config)#no snmp-server community {private}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Unset 'public' for 'snmp-server community'",
     "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable default, easy to guess, settings such as the 'public' setting for snmp-server community.",
+    "rule.severity": "CRITICAL",
+    "rule.description": "An SNMP community string permits read-only access to all objects.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1079,18 +1149,20 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "An SNMP community string permits read-only access to all objects.",
     "rule.rationale": "The default community string \"public\" is well known. Using easy to guess, well known community string poses a threat that an attacker can effortlessly gain unauthorized access to the device.",
+    "rule.default.value": "",
     "id": 10000000000030,
     "rule.category": "Network",
-    "rule.auto.remediation": "Disable the default SNMP community string \"public\"\n```\n\nhostname(config)#no snmp-server community {public} \n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE"
+    "rule.auto.remediation": "Disable the default SNMP community string \"public\"\n```\n\nhostname(config)#no snmp-server community {public} \n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Do not set 'RW' for any 'snmp-server community'",
     "rule.impact": "To reduce the risk of unauthorized access, Organizations should disable the SNMP 'write' access for snmp-server community.",
+    "rule.severity": "CRITICAL",
+    "rule.description": "Specifies read-write access. Authorized management stations can both retrieve and modify MIB objects.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
       "rule.conditions": [
@@ -1105,7 +1177,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1118,13 +1192,11 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "Specifies read-write access. Authorized management stations can both retrieve and modify MIB objects.",
     "rule.rationale": "Enabling SNMP read-write enables remote management of the device. Unless absolutely necessary, do not allow simple network management protocol (SNMP) write access.",
+    "rule.default.value": "",
     "id": 10000000000031,
     "rule.category": "Network",
-    "rule.auto.remediation": "Disable SNMP write access.\n```\n\nhostname(config)#no snmp-server community {<em>write_community_string</em>} \n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE"
+    "rule.auto.remediation": "Disable SNMP write access.\n```\n\nhostname(config)#no snmp-server community {<em>write_community_string</em>} \n```"
   },
   {
     "rule.name": "Set the ACL for each 'snmp-server community'",
@@ -1132,6 +1204,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "This feature specifies a list of IP addresses that are allowed to use the community string to gain access to the SNMP agent.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s2.html#GUID-2F3F13E4-EE81-4590-871D-6AE1043473DE",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1171,11 +1244,17 @@
     "rule.auto.remediation": "Configure authorized SNMP community string and restrict access to authorized management systems.\n```\n\nhostname(config)#snmp-server community <<em>community_string</em>> ro {<em>snmp_access-list_number | \n<span>snmp_access-list_name</span></em><span>}</span>\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Create an 'access-list' for use with SNMP",
+    "rule.impact": "",
+    "rule.severity": "CRITICAL",
+    "rule.description": "You can use access lists to control the transmission of packets on an interface, control Simple Network Management Protocol (SNMP) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -1196,14 +1275,11 @@
         "rule.control.description": "Manage the network infrastructure across network connections that are separated from the business use of that network, relying on separate VLANs or, preferably, on entirely different physical connectivity for management sessions for network devices."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "You can use access lists to control the transmission of packets on an interface, control Simple Network Management Protocol (SNMP) access, and restrict the contents of routing updates. The Cisco IOS software stops checking the extended access list after a match occurs.",
     "rule.rationale": "SNMP ACLs control what addresses are authorized to manage and monitor the device via SNMP. If ACLs are not applied, then anyone with a valid SNMP community string may monitor and manage the router. An ACL should be defined and applied for all SNMP community strings to limit access to a small number of authorized management stations segmented in a trusted management zone.",
     "rule.default.value": "SNMP does not use an access list.",
     "id": 10000000000033,
     "rule.category": "Network",
-    "rule.auto.remediation": "Configure SNMP ACL for restricting access to the device from authorized management stations segmented in a trusted management zone.\n```\n\nhostname(config)#access-list <<em>snmp_acl_number</em>> permit <<em>snmp_access-list</em>>\nhostname(config)#access-list deny any log \n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-a2.html#GUID-9EA733A3-1788-4882-B8C3-AB0A2949120C"
+    "rule.auto.remediation": "Configure SNMP ACL for restricting access to the device from authorized management stations segmented in a trusted management zone.\n```\n\nhostname(config)#access-list <<em>snmp_acl_number</em>> permit <<em>snmp_access-list</em>>\nhostname(config)#access-list deny any log \n```"
   },
   {
     "rule.name": "Set 'snmp-server host' when using SNMP",
@@ -1211,6 +1287,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "SNMP notifications can be sent as traps to authorized management systems.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s5.html#GUID-D84B2AB5-6485-4A23-8C26-73E50F73EE61",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1255,6 +1332,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "SNMP notifications can be sent as traps to authorized management systems.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s3.html#GUID-EB3EB677-A355-42C6-A139-85BA30810C54",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1299,6 +1377,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Specifies authentication of a packet with encryption when using SNMPv3",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s5.html#GUID-56E87D02-C56F-4E2D-A5C8-617E31740C3F",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1314,11 +1393,15 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -1334,6 +1417,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Specify the use of a minimum of 128-bit AES algorithm for encryption when using SNMPv3.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/snmp/command/nm-snmp-cr-s5.html#GUID-4EED4031-E723-4B84-9BBF-610C3CF60E31",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1374,26 +1458,44 @@
     "rule.auto.remediation": "For each SNMPv3 user created on your router add privacy options by issuing the following command.\n```\n\nhostname(config)#snmp-server user {user_name} {group_name} v3 auth sha {auth_password} priv aes 128 {priv_password} {acl_name_or_number}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Control Plane",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "The control plane covers monitoring, route table updates, and generally the dynamic operation of the router. Services, settings, and data streams that support and document the operation, traffic handling, and dynamic status of the router. Examples of control plane services include: logging (e.g. Syslog), routing protocols, status protocols like CDP and HSRP, network topology protocols like STP, and traffic security control protocols like IKE. Network control protocols like ICMP, NTP, ARP, and IGMP directed to or sent by the router itself also fall into this area.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "The control plane covers monitoring, route table updates, and generally the dynamic operation of the router. Services, settings, and data streams that support and document the operation, traffic handling, and dynamic status of the router. Examples of control plane services include: logging (e.g. Syslog), routing protocols, status protocols like CDP and HSRP, network topology protocols like STP, and traffic security control protocols like IKE. Network control protocols like ICMP, NTP, ARP, and IGMP directed to or sent by the router itself also fall into this area.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000038,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "Global Service Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Rules in the global service class enforce server and service controls that protect against attacks or expose the device to exploitation.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Rules in the global service class enforce server and service controls that protect against attacks or expose the device to exploitation.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000039,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'no cdp run'",
@@ -1401,14 +1503,18 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable Cisco Discovery Protocol (CDP) service at device level.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/cdp/command/cdp-cr-a1.html#GUID-E006FAC8-417E-4C3F-B732-4D47B0447750",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1433,6 +1539,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable the Bootstrap Protocol (BOOTP) service on your routing device.",
     "rule.references": "Cisco IOS software receives Cisco Discovery Protocol information",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1448,7 +1555,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1473,6 +1582,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable the Dynamic Host Configuration Protocol (DHCP) server and relay agent features on your router.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/ipaddr/command/ipaddr-r1.html#GUID-1516B259-AA28-4839-B968-8DDBF0B382F6",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1488,7 +1598,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1513,6 +1625,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable the identification (identd) server.",
     "rule.references": "http://www.cisco.com/en/US/docs/solutions/Enterprise/Security/Baseline_Security/sec_chap4.html#wp1056539",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1528,7 +1641,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1553,6 +1668,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Generate keepalive packets on idle incoming network connections.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/R_through_setup.html#GUID-1489ABA3-2428-4A64-B252-296A035DB85E",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1568,7 +1684,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1593,6 +1711,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Generate keepalive packets on idle outgoing network connections.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/R_through_setup.html#GUID-9321ECDC-6284-4BF6-BA4A-9CEEF5F993E5",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1608,7 +1727,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1633,6 +1754,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable X.25 Packet Assembler/Disassembler (PAD) service.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/wan/command/wan-s1.html#GUID-C5497B77-3FD4-4D2F-AB08-1317D5F5473B",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1648,7 +1770,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -1668,15 +1792,24 @@
     "rule.auto.remediation": "Disable the PAD service.\n```\n\nhostname(config)#no service pad\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Setup SSH",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Ensure use of SSH remote console sessions to Cisco routers.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Ensure use of SSH remote console sessions to Cisco routers.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000047,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set version 2 for 'ip ssh version'",
@@ -1684,18 +1817,24 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Specify the version of Secure Shell (SSH) to be run on a router",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-170AECF1-4B5B-462A-8CC8-999DEDC45C21",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -1706,15 +1845,24 @@
     "rule.auto.remediation": "Configure the router to use SSH version 2\n```\n\nhostname(config)#ip ssh version 2\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Configure Prerequisites for the SSH Service",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "[This space intentionally left blank]",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "[This space intentionally left blank]",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000049,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set the 'hostname'",
@@ -1722,6 +1870,7 @@
     "rule.severity": "HIGH",
     "rule.description": "The hostname is used in prompts and default configuration filenames.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/F_through_K.html#GUID-F3349988-EC16-484A-BE81-4C40110E6625",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1737,11 +1886,15 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -1757,6 +1910,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Define a default domain name that the Cisco IOS software uses to complete unqualified hostnames",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/ipaddr/command/ipaddr-i3.html#GUID-A706D62B-9170-45CE-A2C2-7B2052BE2CAB",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1772,11 +1926,15 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -1792,10 +1950,12 @@
     "rule.severity": "HIGH",
     "rule.description": "Use this command to generate RSA key pairs for your Cisco device.\n\nRSA keys are generated in pairs--one public RSA key and one private RSA key.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/a1/sec-cr-c4.html#GUID-2AECF701-D54A-404E-9614-D3AAB049BC13",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -1832,8 +1992,9 @@
     "rule.additional.information": "This cannot exceed 120 seconds.",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -1869,18 +2030,24 @@
     "rule.severity": "HIGH",
     "rule.description": "The number of retries before the SSH login session disconnects.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-5BAC7A2B-0A25-400F-AEE9-C22AE08513C6",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -1891,15 +2058,24 @@
     "rule.auto.remediation": "Configure the SSH timeout: 3 or less\n```\n\nhostname(config)#ip ssh authentication-retries [<em>3</em>]\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Logging Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Rules in the logging class enforce controls that provide a record of system activity and events.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Rules in the logging class enforce controls that provide a record of system activity and events.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000055,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'logging enable'",
@@ -1907,6 +2083,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Enable logging of system messages.",
     "rule.references": "https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-logging-in-cisco-ios/ta-p/3132434",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1952,6 +2129,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Enable system message logging to a local buffer.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios/netmgmt/command/reference/nm_09.html#wp1060051",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -1996,6 +2174,7 @@
     "rule.impact": "Logging critical messages at the console is important for an organization managing technology risk. The 'logging console' command should capture appropriate severity messages to be effective.",
     "rule.severity": "CRITICAL",
     "rule.description": "Verify logging to device console is enabled and limited to a rational severity level to avoid impacting system performance and management.",
+    "rule.references": "",
     "rule.additional.information": "The console is a slow display device. In message storms some logging messages may be silently dropped when the console queue becomes full. Set severity levels accordingly.",
     "rule.tags": [],
     "rule.context": {
@@ -2042,10 +2221,12 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Log system messages and debug output to a remote host.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios/netmgmt/command/reference/nm_09.html#wp1082864",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -2079,10 +2260,12 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Limit messages logged to the syslog servers based on severity level informational.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios/netmgmt/command/reference/nm_09.html#wp1015177",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -2116,6 +2299,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Configure the system to apply a time stamp to debugging messages or system logging messages",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/R_through_setup.html#GUID-DC110E59-D294-4E3D-B67F-CCB06E607FC6",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2161,6 +2345,7 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Specify the source IPv4 or IPv6 address of system logging packets",
     "rule.references": "http://www.cisco.com/en/US/docs/ios/netmgmt/command/reference/nm_09.html#wp1095099",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2201,8 +2386,13 @@
     "rule.auto.remediation": "Bind logging to the loopback interface.\n```\n\nhostname(config)#logging source-interface loopback {<em>loopback_interface_number</em>}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'login success/failure logging'",
+    "rule.impact": "",
+    "rule.severity": "CRITICAL",
+    "rule.description": "Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.",
+    "rule.references": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/config-mgmt/configuration/xe-16-6/config-mgmt-xe-16-6-book/cm-config-logger.pdf",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
       "rule.conditions": [
@@ -2235,17 +2425,22 @@
         "rule.control.description": "Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements."
       }
     ],
-    "rule.severity": "CRITICAL",
-    "rule.description": "Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.",
     "rule.rationale": "Audit records can be generated from various components within the information system (e.g., module or policy filter).",
+    "rule.default.value": "",
     "id": 10000000000063,
     "rule.category": "Network",
-    "rule.auto.remediation": "```\nhostname(config)#login on-failure log\nhostname(config)#login on-success log\nhostname(config)#end\n```",
-    "rule.references": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/config-mgmt/configuration/xe-16-6/config-mgmt-xe-16-6-book/cm-config-logger.pdf"
+    "rule.auto.remediation": "```\nhostname(config)#login on-failure log\nhostname(config)#login on-success log\nhostname(config)#end\n```"
   },
   {
+    "rule.name": "",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "",
+    "rule.references": "",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
+      "rule.check.category": "",
       "rule.conditions": [
         {
           "condition": "contain",
@@ -2253,22 +2448,35 @@
           "occurrence": -1,
           "operator": "AND"
         }
-      ]
+      ],
+      "rule.check.type": ""
     },
     "rule.controls": [],
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000064,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "NTP Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Network Time Protocol allows administrators to set the system time on all of their compatible systems from a single source, ensuring a consistent time stamp for logging and authentication protocols. NTP is an internet standard, defined in RFC1305.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Network Time Protocol allows administrators to set the system time on all of their compatible systems from a single source, ensuring a consistent time stamp for logging and authentication protocols. NTP is an internet standard, defined in RFC1305.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000065,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'ip address' for 'ntp server'",
@@ -2276,10 +2484,12 @@
     "rule.severity": "CRITICAL",
     "rule.description": "Use this command if you want to allow the system to synchronize the system software clock with the specified NTP server.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/bsm/command/bsm-cr-n1.html#GUID-255145EB-D656-43F0-B361-D9CBCC794112:https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/bsm/command/bsm-cr-book/bsm-cr-n1.html#wp3294676008",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -2308,15 +2518,24 @@
     "rule.auto.remediation": "Configure at least one external NTP Server using the following commands\n```\n\nhostname(config)#ntp server {ntp-server_ip_address}\nor \nhostname(config)#ntp server {ntp server vrf [vrf name] ip address}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Require Encryption Keys for NTP",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Encryption keys should be set for NTP Servers.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Encryption keys should be set for NTP Servers.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000067,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'ntp authenticate'",
@@ -2324,6 +2543,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Enable NTP authentication.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/bsm/command/bsm-cr-n1.html#GUID-8BEBDAF4-6D03-4C3E-B8D6-6BCBC7D0F324",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2369,6 +2589,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Define an authentication key for Network Time Protocol (NTP).",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/bsm/command/bsm-cr-n1.html#GUID-0435BFD1-D7D7-41D4-97AC-7731C11226BC",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2414,6 +2635,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Ensure you authenticate the identity of a system to which Network Time Protocol (NTP) will synchronize",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/bsm/command/bsm-cr-n1.html#GUID-89CA798D-0F12-4AE8-B382-DE10CBD261DB",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2454,9 +2676,13 @@
     "rule.auto.remediation": "Configure the NTP trusted key using the following command\n```\n\nhostname(config)#ntp trusted-key {ntp_key_id}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'key' for each 'ntp server'",
     "rule.impact": "Organizations should establish three Network Time Protocol (NTP) hosts to set consistent time across the enterprise. Enabling the 'ntp server key' command enforces encrypted authentication between NTP hosts.",
+    "rule.severity": "HIGH",
+    "rule.description": "Specifies the authentication key for NTP.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
       "rule.conditions": [
@@ -2489,8 +2715,6 @@
         "rule.control.description": "Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent."
       }
     ],
-    "rule.severity": "HIGH",
-    "rule.description": "Specifies the authentication key for NTP.",
     "rule.rationale": "This authentication feature provides protection against accidentally synchronizing the ntp system to another system that is not trusted, because the other system must know the correct authentication key.",
     "rule.default.value": "No NTP key is set by default",
     "id": 10000000000071,
@@ -2498,15 +2722,24 @@
     "rule.auto.remediation": "Configure each NTP Server to use a key ring using the following command.\n```\n\nhostname(config)#ntp server {<em>ntp-server_ip_address</em>}{key <em>ntp_key_id</em>} \n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Loopback Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "When a router needs to initiate connections to remote hosts, for example for SYSLOG or NTP, it will use the nearest interface for the packets source address. This can cause issues due to the possible variation in source, potentially causing packets to be denied by intervening firewalls or handled incorrectly by the receiving host. To prevent these problems the router should be configured with a Loopback interface and any services should be bound to this address.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "When a router needs to initiate connections to remote hosts, for example for SYSLOG or NTP, it will use the nearest interface for the packets source address. This can cause issues due to the possible variation in source, potentially causing packets to be denied by intervening firewalls or handled incorrectly by the receiving host. To prevent these problems the router should be configured with a Loopback interface and any services should be bound to this address.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000072,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Create a single 'interface loopback'",
@@ -2514,14 +2747,18 @@
     "rule.severity": "HIGH",
     "rule.description": "Configure a single loopback interface.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/interface/command/ir-i1.html#GUID-0D6BDFCD-3FBB-4D26-A274-C1221F8592DF",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2541,9 +2778,13 @@
     "rule.auto.remediation": "Define and configure one loopback interface.\n```\n\nhostname(config)#interface loopback <<em>number</em>>\nhostname(config-if)#ip address <<em>loopback_ip_address</em>> <<em>loopback_subnet_mask</em>> \n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Set AAA 'source-interface'",
     "rule.impact": "Organizations should design and implement authentication, authorization, and accounting (AAA) services for effective monitoring of enterprise network devices. Binding AAA services to the source-interface loopback enables these services.",
+    "rule.severity": "HIGH",
+    "rule.description": "Force AAA to use the IP address of a specified interface for all outgoing AAA packets",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i2.html#GUID-22E8B211-751F-48E0-9C76-58F0FE0AABA8:http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-54A00318-CF69-46FC-9ADC-313BFC436713",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
       "rule.conditions": [
@@ -2576,13 +2817,11 @@
         "rule.control.description": "Configure access for all accounts through as few centralized points of authentication as possible, including network, security, and cloud systems."
       }
     ],
-    "rule.severity": "HIGH",
-    "rule.description": "Force AAA to use the IP address of a specified interface for all outgoing AAA packets",
     "rule.rationale": "This is required so that the AAA server (RADIUS or TACACS+) can easily identify routers and authenticate requests by their IP address.",
+    "rule.default.value": "",
     "id": 10000000000074,
     "rule.category": "Network",
-    "rule.auto.remediation": "Bind AAA services to the loopback interface.\n```\n\nHostname(config)#ip radius source-interface loopback {loopback_interface_number}\nor\nHostname(config)#aaa group server tacacs+ {group_name} hostname(config-sg-tacacs+)#ip tacacs source-interface {loopback_interface_number}\n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i2.html#GUID-22E8B211-751F-48E0-9C76-58F0FE0AABA8:http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-54A00318-CF69-46FC-9ADC-313BFC436713"
+    "rule.auto.remediation": "Bind AAA services to the loopback interface.\n```\n\nHostname(config)#ip radius source-interface loopback {loopback_interface_number}\nor\nHostname(config)#aaa group server tacacs+ {group_name} hostname(config-sg-tacacs+)#ip tacacs source-interface {loopback_interface_number}\n```"
   },
   {
     "rule.name": "Set 'ntp source' to Loopback Interface",
@@ -2590,6 +2829,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Use a particular source address in Network Time Protocol (NTP) packets.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/bsm/command/bsm-cr-n1.html#GUID-DF29FBFB-E1C0-4E5C-9013-D4CE59CA0B88",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2635,6 +2875,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Specify the IP address of an interface as the source address for TFTP connections.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/fundamentals/command/F_through_K.html#GUID-9AA27050-A578-47CD-9F1D-5A8E2B449209",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2650,7 +2891,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2670,26 +2913,44 @@
     "rule.auto.remediation": "Bind the TFTP client to the loopback interface.\n```\n\nhostname(config)#ip tftp source-interface loopback {<em>loobpback_interface_number</em>}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Data Plane",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Services and settings related to the data passing through the router (as opposed to direct to it). The data plane is for everything not in control or management planes. Settings on a router concerned with the data plane include interface access lists, firewall functionality (e.g. CBAC), NAT, and IPSec. Settings for traffic-affecting services like unicast RPF verification and CAR/QoS also fall into this area.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Services and settings related to the data passing through the router (as opposed to direct to it). The data plane is for everything not in control or management planes. Settings on a router concerned with the data plane include interface access lists, firewall functionality (e.g. CBAC), NAT, and IPSec. Settings for traffic-affecting services like unicast RPF verification and CAR/QoS also fall into this area.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000077,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "Routing Rules",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Unneeded services should be disabled.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Unneeded services should be disabled.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000078,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'no ip source-route'",
@@ -2697,6 +2958,7 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable the handling of IP datagrams with source routing header options.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/ipaddr/command/ipaddr-i4.html#GUID-C7F971DD-358F-4B43-9F3E-244F5D4A3A93",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
       "rule.check.category": "basic",
@@ -2712,7 +2974,9 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2737,14 +3001,18 @@
     "rule.severity": "HIGH",
     "rule.description": "Disable proxy ARP on all interfaces.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/ipaddr/command/ipaddr-i4.html#GUID-AEB7DDCB-7B3D-4036-ACF0-0A0250F3002E",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2769,14 +3037,18 @@
     "rule.severity": "HIGH",
     "rule.description": "Verify no tunnel interfaces are defined.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/interface/command/ir-i1.html#GUID-0D6BDFCD-3FBB-4D26-A274-C1221F8592DF",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2801,14 +3073,18 @@
     "rule.severity": "HIGH",
     "rule.description": "Examines incoming packets to determine whether the source address is in the Forwarding Information Base (FIB) and permits the packet only if the source is reachable through the interface on which the packet was received (sometimes referred to as strict mode).",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i3.html#GUID-2ED313DB-3D3F-49D7-880A-047463632757:https://community.cisco.com/t5/routing/ip-verify-unicast-source-reachable-via-rx/td-p/1710172",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2828,15 +3104,24 @@
     "rule.auto.remediation": "Configure uRPF.\n```\n\nhostname(config)#interface {<em>interface_name</em>}\nhostname(config-if)#ip verify unicast source reachable-via rx allow-default\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Border Router Filtering",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "A border-filtering device connects \"internal\" networks such as desktop networks, DMZ networks, etc., to \"external\" networks such as the Internet. If this group is chosen, then ingress and egress filter rules will be required.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "A border-filtering device connects \"internal\" networks such as desktop networks, DMZ networks, etc., to \"external\" networks such as the Internet. If this group is chosen, then ingress and egress filter rules will be required.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000083,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'ip access-list extended' to Forbid Private Source Addresses from External Networks",
@@ -2844,14 +3129,18 @@
     "rule.severity": "MEDIUM",
     "rule.description": "This command places the router in access-list configuration mode, where you must define the denied or permitted access conditions by using the deny and permit commands.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/security/d1/sec-cr-i1.html#GUID-BD76E065-8EAC-4B32-AF25-04BA94DD2B11",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": [],
-      "rule.check.type": "cli"
+      "rule.check.category": "",
+      "rule.check.type": "cli",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
@@ -2871,26 +3160,44 @@
     "rule.auto.remediation": "Configure ACL for private source address restrictions from external networks.\n```\n\nhostname(config)#ip access-list extended {<span><em>name | number</em>} \n</span><span>hostname(config-nacl)#deny ip {</span><em>internal_networks</em>} any log\nhostname(config<span>-nacl</span>)#deny ip 127.0.0.0 0.255.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip 10.0.0.0 0.255.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip 0.0.0.0 0.255.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip 172.16.0.0 0.15.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip 192.168.0.0 0.0.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip 192.0.2.0 0.0.0.255 any log\nhostname(config<span>-nacl</span>)#deny ip 169.254.0.0 0.0.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip 224.0.0.0 31.255.255.255 any log\nhostname(config<span>-nacl</span>)#deny ip host 255.255.255.255 any log\nhostname(config<span>-nacl</span>)#permit {protocol} {source_ip} {source_mask} {destination} {destination_mask} log\nhostname(config<span>-nacl</span>)#deny any any log\nhostname(config)#interface <external_<em>interface</em>>\nhostname(config-if)#access-group <<em>access-list</em>> in\n\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Neighbor Authentication",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Enable routing authentication.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Enable routing authentication.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000085,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
-    "rule.tags": [],
     "rule.name": "Require EIGRP Authentication if Protocol is Used",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Verify enhanced interior gateway routing protocol (EIGRP) authentication is enabled, if routing protocol is used, where feasible.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Verify enhanced interior gateway routing protocol (EIGRP) authentication is enabled, if routing protocol is used, where feasible.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000086,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'key chain'",
@@ -2898,9 +3205,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Define an authentication key chain to enable authentication for routing protocols. A key chain must have at least one key and can have up to 2,147,483,647 keys.\n\nNOTE: Only DRP Agent, EIGRP, and RIPv2 use key chains.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_pi/command/iri-cr-a1.html#GUID-A62E89F5-0B8B-4CF0-B4EB-08F2762D88BB",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -2930,11 +3240,17 @@
     "rule.auto.remediation": "Establish the key chain.\n```\n\nhostname(config)#key chain {<em>key-chain_name</em>}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Set 'key'",
     "rule.impact": "Organizations should plan and implement enterprise security policies that require rigorous authentication methods for routing protocols. Using 'key numbers' for key chains for routing protocols enforces these policies.",
+    "rule.severity": "MEDIUM",
+    "rule.description": "Configure an authentication key on a key chain.",
+    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_pi/command/iri-cr-a1.html#GUID-3F31B2E0-0E4B-4F49-A4A8-8ADA1CA0D73F",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -2957,13 +3273,11 @@
         "rule.control.description": "Ensure that only network ports, protocols, and services listening on a system with validated business needs, are running on each system."
       }
     ],
-    "rule.severity": "MEDIUM",
-    "rule.description": "Configure an authentication key on a key chain.",
     "rule.rationale": "This is part of the routing authentication setup",
+    "rule.default.value": "",
     "id": 10000000000088,
     "rule.category": "Network",
-    "rule.auto.remediation": "Configure the key number.\n```\n\nhostname(config-keychain)#key {<em>key-number</em>}\n```",
-    "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_pi/command/iri-cr-a1.html#GUID-3F31B2E0-0E4B-4F49-A4A8-8ADA1CA0D73F"
+    "rule.auto.remediation": "Configure the key number.\n```\n\nhostname(config-keychain)#key {<em>key-number</em>}\n```"
   },
   {
     "rule.name": "Set 'key-string'",
@@ -2971,9 +3285,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Configure the authentication string for a key.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_pi/command/iri-cr-a1.html#GUID-D7A8DC18-2E16-4EA5-8762-8B68B94CC43E",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3008,9 +3325,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Configure the EIGRP address family.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-i1.html#GUID-67388D6C-AE9C-47CA-8C35-2A2CF9FA668E:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-C03CFC8A-3CE3-4CF9-9D65-52990DBD3377",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3045,9 +3365,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Defines user defaults to apply to EIGRP interfaces that belong to an address-family.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-i1.html#GUID-67388D6C-AE9C-47CA-8C35-2A2CF9FA668E:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-C03CFC8A-3CE3-4CF9-9D65-52990DBD3377:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-DC0EF1D3-DFD4-45DF-A553-FA432A3E7233",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3082,9 +3405,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Configure the EIGRP address family key chain.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-i1.html#GUID-67388D6C-AE9C-47CA-8C35-2A2CF9FA668E:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-C03CFC8A-3CE3-4CF9-9D65-52990DBD3377:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-6B6ED6A3-1AAA-4EFA-B6B8-9BF11EEC37A0",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3119,9 +3445,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Configure authentication to prevent unapproved sources from introducing unauthorized or false service messages.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-i1.html#GUID-67388D6C-AE9C-47CA-8C35-2A2CF9FA668E:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-C03CFC8A-3CE3-4CF9-9D65-52990DBD3377:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-a1.html#GUID-A29E0EF6-4CEF-40A7-9824-367939001B73",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3156,9 +3485,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Specify the type of authentication used in Enhanced Interior Gateway Routing Protocol (EIGRP) packets per interface.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/interface/command/ir-i1.html#GUID-0D6BDFCD-3FBB-4D26-A274-C1221F8592DF:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-i1.html#GUID-0B344B46-5E8E-4FE2-A3E0-D92410CE5E91",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3193,9 +3525,12 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Configure authentication to prevent unapproved sources from introducing unauthorized or false routing messages.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/interface/command/ir-i1.html#GUID-0D6BDFCD-3FBB-4D26-A274-C1221F8592DF:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/command/ire-i1.html#GUID-8D1B0697-8E96-4D8A-BD20-536956D68506",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
@@ -3225,15 +3560,24 @@
     "rule.auto.remediation": "Configure the interface with the EIGRP authentication mode.\n```\n\nhostname(config)#interface {<em>interface_name</em>}\nhostname(config-if)#ip authentication mode eigrp {<em><span>eigrp_as-number</span></em><span>}</span> md5\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Require OSPF Authentication if Protocol is Used",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Verify open shortest path first (OSPF) authentication is enabled, where feasible.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Verify open shortest path first (OSPF) authentication is enabled, where feasible.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000096,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'authentication message-digest' for OSPF area",
@@ -3257,11 +3601,15 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -3277,17 +3625,24 @@
     "rule.severity": "MEDIUM",
     "rule.description": "Enable Open Shortest Path First (OSPF) Message Digest 5 (MD5) authentication.",
     "rule.references": "http://www.cisco.com/en/US/docs/ios-xml/ios/interface/command/ir-i1.html#GUID-0D6BDFCD-3FBB-4D26-A274-C1221F8592DF:http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_ospf/command/ospf-i1.html#GUID-939C79FF-8C09-4D5A-AEB5-DAF25038CA18",
+    "rule.additional.information": "",
     "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
@@ -3298,15 +3653,24 @@
     "rule.auto.remediation": "Configure the appropriate interface(s) for Message Digest authentication\n```\n\nhostname(config)#interface {<em>interface_name</em>}\nhostname(config-if)#ip ospf message-digest-key {<em>ospf_md5_key-id</em>} md5 {<em>ospf_md5_key</em>}\n```"
   },
   {
-    "rule.tags": [],
     "rule.name": "Require BGP Authentication if Protocol is Used",
+    "rule.impact": "",
+    "rule.severity": "",
+    "rule.description": "Border Gateway Protocol (BGP)is a path vector protocol used for interior and exterior gateway routing on some networks.\n\nBGP is a complex protocol, with many configuration options which may have effects which are not immediately obvious.\n\nVerify Border Gateway Protocol (BGP) authentication is enabled, if routing protocol is used, where feasible.",
+    "rule.references": "",
+    "rule.additional.information": "",
+    "rule.tags": [],
     "rule.context": {
-      "rule.conditions": []
+      "rule.check.category": "",
+      "rule.check.type": "",
+      "rule_conditions": []
     },
     "rule.controls": [],
-    "rule.description": "Border Gateway Protocol (BGP)is a path vector protocol used for interior and exterior gateway routing on some networks.\n\nBGP is a complex protocol, with many configuration options which may have effects which are not immediately obvious.\n\nVerify Border Gateway Protocol (BGP) authentication is enabled, if routing protocol is used, where feasible.",
+    "rule.rationale": "",
+    "rule.default.value": "",
     "id": 10000000000099,
-    "rule.category": "Network"
+    "rule.category": "Network",
+    "rule.auto.remediation": ""
   },
   {
     "rule.name": "Set 'neighbor password'",
@@ -3330,11 +3694,15 @@
     },
     "rule.controls": [
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       },
       {
+        "rule.control.ig": [],
         "rule.control.name": "Explicitly Not Mapped",
+        "rule.control.version": "",
         "rule.control.description": "Explicitly Not Mapped"
       }
     ],
